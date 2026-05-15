@@ -11,28 +11,33 @@
 
 ---
 
-**Summary of Functionalities**
+## Current State of Application (Tuesday 05 May 2026)
 
-- **Daily Expense Tracker**
+The current version of CoinCtrl has the following (working) functionalities/modules;
 
-The user would make entries on financial transactions made in a day. The user would enter the title of expense and its cost. The user would also specify whether the transaction made was a **fixed (necessary)** or **variable (unplanned)** expense.
+**=> Review Expenses Module**
 
-- **Monthly Financial Records (Income only)**
+This module's purpose is to generate an expenses report. This version of the module returns all expense data, no seperation of the types of expenses (fixed or variable expenses).
+The Review Expenses Module displays all expenses (in the expenses database) in a list form (basic UI design)
 
-The user would use this module to record their personal financial activities on a monthly basis. The current version of the application only offers users to record their income data.
+<div align="center">
+
+<img src="" width="700">
+</div>
+
+Moving forward, the module should/will separate the expenses by type, as well as displaying data in a table format. The module should display expenses for a specified timeframe.
+
+**=> Record Daily Expense Module**
+
+This module's purpose is to allow the user to record their expenses, specifically the title of expense, its amount and expense type (Variable or fixed).
+
+The current version of the module
+
+<div align="center">
 
 
----
-## Overview of software
+</div>
 
-**User Interaction/Experience**
+**=> Income Recorder Module**
 
-- The user interface is very basic (limited to the terminal). User is given a menu screen to interact with the system according to their desire. Not all options are available to the user (current version of the application), so the user experience is affected negatively. 
 
-**Exception Handling**
-
-- Minimal to no exception handling techniques were applied to validate user's entries . Existing exception handling were made only for SQL-related syntax.
-
-**Note**
-
-- The current version of the application is incomplete. Some modules of the application needs complete over-haul (rewriting or restructuring). Some functionalities are limiting, especially for the user (e.g. the income and expense modules).

@@ -4,12 +4,15 @@
 * */
 
 // importing necessary libraries
-import com.mysql.cj.protocol.Resultset;
 
 import java.sql.*;
 
 // Data admin class -> Handles interaction between CoinCtrl's logic and the database
 public class DBAdmin {
+
+    // Methods for Expenses
+
+    //**---------------------------------------------------------------------------------------------------------**
 
   // Method to record the user's daily expenditures
     public void DailyExpenseRecorder(String title, double amount, String type, Date transactionDate) {
@@ -73,8 +76,51 @@ public class DBAdmin {
 
     }
 
-    // Method to display all financial activities (future versions will allow users to see data for a specific month, or multiple months)
-    public void MBDataImport() {}
+    // Method to import expense data by specified time()
+    public void ExpensesByTime(String dateInput){
+
+        // SQL script to import expense data by time (Month)
+        String MonthSQLQuery = "SELECT * FROM dailyexpensetracker WHERE MONTHNAME(Transaction_Date)= ? OR DATE_FORMAT(Transaction_Date, '%b') = ?";
+
+        try(Connection connection = DBConnection.getConnection();
+        PreparedStatement stmt = connection.prepareStatement(MonthSQLQuery);
+        ResultSet ers = stmt.executeQuery()){
+
+            while(ers.next()){
+                System.out.println(
+                        "\n Title of Expense: " +  ers.getString("Title") +
+                                "\n Amount: R" + ers.getDouble("Amount") +
+                                "\n Date of Transaction: " + ers.getDate("Transaction_Date") +
+                                "\n Expense Type: " + ers.getString("Type")
+                                + "\n----------"
+                );
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    // Method to import expenses by type (Variable/Fixed)
+    public void ExpensesByType(String specifiedMonth, int typeInput){}
+
+
+    // Method to import expense data by specified time and type
+    public void ExpenseByMonthType(String SpecifiedMonth, int TypeInput){
+    }
+
+    // Method to save expense data into a CSV file (backing up data)
+    public void ExpenseDocWriter(){}
+
+
+
+    //**-------------------------------------------------------------------------------------------------**
+
+
+    // ** Methods for Income **
+
+    // ------------------------------------------------------------------------------------------------------
 
     // Method to record the user's monthly income data
     public void MonthlyIncomeRecorder(String incomeSource, double expectedAmount, double actualAmount, Date incomeDate) throws SQLException {
@@ -111,6 +157,22 @@ public class DBAdmin {
 
     }
 
+    // Method to import All income data
+    public void ImportIncomeData(){}
 
+    // Method to import income data by time
+    public void IncomeByTime(){}
+
+    // Method to dave income data into a csv file (backing up data)
+    public void IncomeDocWriter(){}
+
+
+    // ------------------------------------------------------------------------
 
 }
+
+/*
+** Note **
+*
+* Future versions of the application, it may be necessary to create a class to handle CSV file writing
+ */
