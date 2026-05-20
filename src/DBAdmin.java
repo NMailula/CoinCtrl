@@ -10,7 +10,7 @@ import java.sql.*;
 // Data admin class -> Handles interaction between CoinCtrl's logic and the database
 public class DBAdmin {
 
-    // Methods for Expenses
+    // Methods for Expenses-related DB operations
 
     //**---------------------------------------------------------------------------------------------------------**
 
@@ -77,24 +77,36 @@ public class DBAdmin {
     }
 
     // Method to import expense data by specified time()
-    public void ExpensesByTime(String dateInput){
+    public void ExpensesByTime(String monthInput){
 
         // SQL script to import expense data by time (Month)
-        String MonthSQLQuery = "SELECT * FROM dailyexpensetracker WHERE MONTHNAME(Transaction_Date)= ? OR DATE_FORMAT(Transaction_Date, '%b') = ?";
+        String MonthSQLQuery = "SELECT * FROM dailyexpensetracker WHERE LOWER(MONTHNAME(Transaction_Date)) LIKE ? OR LOWER(DATE_FORMAT(Transaction_Date, '%b')) LIKE ?";
+        String search = "%" +  monthInput + "%";
 
         try(Connection connection = DBConnection.getConnection();
         PreparedStatement stmt = connection.prepareStatement(MonthSQLQuery);
-        ResultSet ers = stmt.executeQuery()){
+        ){
 
-            while(ers.next()){
-                System.out.println(
-                        "\n Title of Expense: " +  ers.getString("Title") +
-                                "\n Amount: R" + ers.getDouble("Amount") +
-                                "\n Date of Transaction: " + ers.getDate("Transaction_Date") +
-                                "\n Expense Type: " + ers.getString("Type")
-                                + "\n----------"
+
+           stmt.setString(1, search);
+           stmt.setString(2, search);
+
+           ResultSet rs = stmt.executeQuery();
+
+           // Displaying results
+            System.out.println("----------------------------------");
+            while(rs.next()){
+                System.out.println("\n<------->" +
+                       "\nTitle: " + rs.getString("Title") + "\n" +
+                       "Amount: R" + rs.getDouble("Amount") + "\n" +
+                        "Date: "+ rs.getDate("Transaction_Date") + "\n" +
+                        "Type: " + rs.getString("Type") + "\n<------->"
+
+
                 );
             }
+            System.out.println("----------------------------------");
+
 
         }catch (SQLException e){
             e.printStackTrace();
@@ -118,7 +130,7 @@ public class DBAdmin {
     //**-------------------------------------------------------------------------------------------------**
 
 
-    // ** Methods for Income **
+    // ** Methods for Income-related DB Operations **
 
     // ------------------------------------------------------------------------------------------------------
 

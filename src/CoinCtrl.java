@@ -9,20 +9,21 @@ An application developed to record user's financial activities
 */
 
 // Importing libraries necessary
-import java.sql.Date;
-import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.Scanner;
 
 
 // Main class of the CoinCtrl Application
 public class CoinCtrl {
 
+    private static final Scanner CoinCtrl = new Scanner(System.in);
+
+    static FinancialOperations FO = new FinancialOperations();
+    static DBAdmin DAN = new DBAdmin();
+
     
     // Main method to run/start the entire application
     public static void main(String[] args)  {
 
-        Scanner scan = new Scanner(System.in);
 
         // Welcome message to the Application
         System.out.println(" \n*** Welcome to CoinCtrl ***" +
@@ -36,7 +37,7 @@ public class CoinCtrl {
 
         // User's input (main menu input)
         System.out.print("~> ");
-        int menuInput = scan.nextInt();
+        int menuInput = CoinCtrl.nextInt();
 
         //
         switch (menuInput) {
@@ -64,7 +65,7 @@ public class CoinCtrl {
     // Method to handle expense related operations
     public static void Expenses()  {
 
-        Scanner scanner = new Scanner(System.in);
+       int menuInput = 0;
 
         // Expenses sub-menu
         System.out.println("\n ------------------" + "\n 1) Record Expenses"+ "\n 2) Review ALL Expense Data" + "\n 3) Review Expenses (By time)" +
@@ -73,20 +74,36 @@ public class CoinCtrl {
 
         //
         System.out.print("~> ");
-        int menuInput = scanner.nextInt();
+         menuInput = CoinCtrl.nextInt();
 
         //
         switch (menuInput) {
 
             case 1:
-                System.out.println("");
+                System.out.println("\n** Recording Expense **");
+                FO.AddExpenses();
                 break;
 
                 case 2:
-                    System.out.println("");
+                    System.out.println("\n ** REVIEWING ALL EXPENSES");
+                    DAN.DEDataImport();
                     break;
 
             case 3:
+                System.out.println("** REVIEWING EXPENSES BY TIME **");
+                FO.ReviewExpensesByTime();
+                break;
+
+                case 4:
+                    System.out.println("** REVIEWING EXPENSES BY TYPE **");
+                    break;
+
+            case 5:
+                System.out.println("** REVIEWING EXPENSES BY TIME AND TYPE **");
+                break;
+
+                default:
+                    System.out.println("Invalid Input");
 
         }
 
@@ -96,18 +113,31 @@ public class CoinCtrl {
     // Method to handle expense related operations
     public static void Income()  {
 
-        Scanner scanner = new Scanner(System.in);
-
         // Expenses sub-menu
         System.out.println("\n ------------------" + "\n 1) Record Income"+ "\n 2) Review ALL Income Data"
                 + "\n 3) Review Income (By time)" +
-                "\n 4) Review Expenses (By type)" +
                 "\n ------------------");
 
         System.out.print("~> ");
-        int menuInput = scanner.nextInt();
+        int menuInput = CoinCtrl.nextInt();
 
-        switch (menuInput) {}
+        switch (menuInput) {
+
+            case 1:
+                System.out.println("");
+                break;
+
+            case 2:
+                System.out.println("");
+                break;
+
+            case 3:
+                System.out.println("");
+                break;
+
+            default:
+                System.out.println("Invalid Input");
+        }
     }
 
     // Method to handle operations for overall finances
