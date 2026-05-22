@@ -96,10 +96,12 @@ public class CoinCtrl {
 
                 case 4:
                     System.out.println("** REVIEWING EXPENSES BY TYPE **");
+                    FO.ReviewExpensesByType();
                     break;
 
             case 5:
                 System.out.println("** REVIEWING EXPENSES BY TIME AND TYPE **");
+                FO.ReviewExpensesByTNT();
                 break;
 
                 default:

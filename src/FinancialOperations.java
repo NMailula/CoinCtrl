@@ -16,7 +16,7 @@ public class FinancialOperations {
 
     // ----------------------------------------------------------------------------
 
-    // Method to handle operations to review expenses by time
+    // Method to handle operations to review expenses by time (Month)
     public void ReviewExpensesByTime(){
 
         //
@@ -43,10 +43,79 @@ public class FinancialOperations {
     }
 
     // Method to handle operations to review expenses by type
-    public void ReviewExpensesByType(){}
+    public void ReviewExpensesByType(){
+
+        //
+        String typeInput = "";
+
+        while (true) {
+
+            System.out.println("\n Enter type of expense to search (Variable or Fixed)");
+            System.out.print("--> ");
+
+            typeInput = input.nextLine().trim();
+
+            if (typeInput.equals("Variable") || typeInput.equals("Fixed")) {
+                break;
+            } else{
+                System.out.println("\n** Error: Please enter correct expense type (FIXED OR VARIABLE) ***");
+            }
+
+        }
+
+
+        DAN.ExpensesByType(typeInput);
+
+
+
+
+
+    }
 
     // Method to handle operations to review expenses by both time and type
-    public void ReviewExpensesByTNT(){}
+    public void ReviewExpensesByTNT(){
+
+        String SpecifiedMonth = "";
+        String TypeInput = "";
+
+        // Handling month input
+        while (true) {
+
+            System.out.println("\n Enter month name to search for expense data (e.g. December or Dec)");
+            System.out.print("--> ");
+            SpecifiedMonth = input.nextLine().trim();
+
+            if (SpecifiedMonth.matches("[a-zA-Z]+( [a-zA-Z]+)*")){
+                break;
+            } else {
+                System.out.println("Invalid Title input!");
+
+            }
+        }
+
+        // Handling expense type input
+        while (true) {
+
+            System.out.println("\n Enter type of expense to search (Variable or Fixed)");
+            System.out.print("--> ");
+
+            TypeInput = input.nextLine().trim();
+
+            if (TypeInput.equals("Variable") || TypeInput.equals("Fixed")) {
+                break;
+            } else{
+                System.out.println("\n** Error: Please enter correct expense type (FIXED OR VARIABLE) ***");
+            }
+
+        }
+
+
+        //
+        DAN.ExpenseByMonthType(SpecifiedMonth, TypeInput);
+
+        //
+      //  DAN.ExpenseByMonthType(SpecifiedMonth, TypeInput);
+    }
 
     // Method to handle operations to add expense data
     public void AddExpenses(){
@@ -121,8 +190,6 @@ public class FinancialOperations {
 
 
         // Type of Expense
-
-        // A run-time error occurs here: syntax executes before user input is made
         while(true) {
 
             input.nextLine();

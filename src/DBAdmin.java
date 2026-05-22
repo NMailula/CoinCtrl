@@ -115,11 +115,50 @@ public class DBAdmin {
     }
 
     // Method to import expenses by type (Variable/Fixed)
-    public void ExpensesByType(String specifiedMonth, int typeInput){}
+    public void ExpensesByType(String typeInput){
+
+
+        // SQL script to import data by type
+        String typeSQLQuery = "SELECT * FROM dailyexpenseTracker WHERE Type LIKE ?";
+
+        try (Connection connection = DBConnection.getConnection();
+        PreparedStatement qstmt = connection.prepareStatement(typeSQLQuery);) {
+
+            qstmt.setString(1, typeInput);
+
+            ResultSet trs = qstmt.executeQuery();
+
+            // Displaying results
+            System.out.println("----------------------------------");
+            while(trs.next()){
+                System.out.println("\n<------->" +
+                        "\nTitle: " + trs.getString("Title") + "\n" +
+                        "Amount: R" + trs.getDouble("Amount") + "\n" +
+                        "Date: "+ trs.getDate("Transaction_Date") + "\n" +
+                        "Type: " + trs.getString("Type") + "\n<------->"
+
+
+                );
+            }
+            System.out.println("----------------------------------");
+
+
+
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+
+
+    }
 
 
     // Method to import expense data by specified time and type
-    public void ExpenseByMonthType(String SpecifiedMonth, int TypeInput){
+    public void ExpenseByMonthType(String SpecifiedMonth, String TypeInput){
+
+
+
     }
 
     // Method to save expense data into a CSV file (backing up data)
