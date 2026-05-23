@@ -10,6 +10,8 @@ import java.sql.*;
 // Data admin class -> Handles interaction between CoinCtrl's logic and the database
 public class DBAdmin {
 
+
+
     // Methods for Expenses-related DB operations
 
     //**---------------------------------------------------------------------------------------------------------**
@@ -156,6 +158,39 @@ public class DBAdmin {
 
     // Method to import expense data by specified time and type
     public void ExpenseByMonthType(String SpecifiedMonth, String TypeInput){
+
+        // SQL Query to import expense data by both specified time (month) and type
+        String MonthTypeSQLQuery = "SELECT * FROM dailyexpenseTracker WHERE MONTHNAME(Transaction_Date) LIKE ? AND Type LIKE ?";
+
+        try(Connection connection = DBConnection.getConnection();
+       PreparedStatement mstmt = connection.prepareStatement(MonthTypeSQLQuery);) {
+
+
+            mstmt.setString(1, SpecifiedMonth);
+            mstmt.setString(2, TypeInput);
+
+            ResultSet mtrs = mstmt.executeQuery();
+
+
+            // Displaying results
+            System.out.println("----------------------------------");
+            while(mtrs.next()){
+                System.out.println("\n<------->" +
+                        "\nTitle: " + mtrs.getString("Title") + "\n" +
+                        "Amount: R" + mtrs.getDouble("Amount") + "\n" +
+                        "Date: "+ mtrs.getDate("Transaction_Date") + "\n" +
+                        "Type: " + mtrs.getString("Type") + "\n<------->"
+
+
+                );
+            }
+            System.out.println("----------------------------------");
+
+
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
 
 
 
