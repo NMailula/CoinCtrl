@@ -126,15 +126,18 @@ public class CoinCtrl {
         switch (menuInput) {
 
             case 1:
-                System.out.println("");
+                System.out.println("\n** RECORDING INCOME DATA **");
+                FO.AddIncome();
                 break;
 
             case 2:
-                System.out.println("");
+                System.out.println("\n** REVIEWING ALL INCOME DATA **");
+                FO.ReviewAllIncome();
                 break;
 
             case 3:
-                System.out.println("");
+                System.out.println("\n** REVIEWING INCOME (BY TIME) **");
+                FO.ReviewIncomeByTime();
                 break;
 
             default:
