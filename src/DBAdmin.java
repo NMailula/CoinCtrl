@@ -5,7 +5,12 @@
 
 // importing necessary libraries
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDate;
 
 // Data admin class -> Handles interaction between CoinCtrl's logic and the database
 public class DBAdmin {
@@ -49,18 +54,18 @@ public class DBAdmin {
     // Method to import all expenses data (future version will allow user to specify time-frame such as month)
     public void DEDataImport() {
 
-        // SQL query to select all expenses
+        // SQL query to select all expense data (no specification of data)
         String ImportExpenses = "SELECT * FROM dailyexpensetracker";
 
-        //
+        // Syntax to import expense data
         try(Connection connection = DBConnection.getConnection();
             PreparedStatement pstmt1 = connection.prepareStatement(ImportExpenses);
-            ResultSet rs = pstmt1.executeQuery();){
+            ResultSet rs = pstmt1.executeQuery()){
 
 
-            // While loop to display all data
+            // While-loop to display all data
             while(rs.next()){
-                //
+
                 System.out.println(
                      "\n Title of Expense: " +  rs.getString("Title") +
                              "\n Amount: R" + rs.getDouble("Amount") +
@@ -197,7 +202,7 @@ public class DBAdmin {
     }
 
     // Method to save expense data into a CSV file (backing up data)
-    public void ExpenseDocWriter(){}
+  public void ExpenseDocWriter(){}
 
 
 
@@ -210,9 +215,6 @@ public class DBAdmin {
 
     // Method to record the user's monthly income data
     public void MonthlyIncomeRecorder(String incomeSource, double expectedAmount, double actualAmount, Date incomeDate) throws SQLException {
-
-        //
-        DBConnection dbConnection = new DBConnection();
 
         // SQL Query to insert into specified database table
         String UploadIncomeData = "INSERT INTO monthlyincome (Income_Source, Expected_Amount, Actual_Amount, MI_Date) VALUES (?, ?, ?, ?)";
@@ -244,10 +246,79 @@ public class DBAdmin {
     }
 
     // Method to import All income data
-    public void ImportIncomeData(){}
+    public void ImportIncomeData(){
+
+        // SQL query to select all income data (no specification)
+        String ImportIncome = "SELECT * FROM monthlyincome";
+
+        // Syntax to import import data
+        try(Connection connection = DBConnection.getConnection();
+        PreparedStatement incomestmt = connection.prepareStatement(ImportIncome);
+        ResultSet incomeRs = incomestmt.executeQuery()){
+
+            // While-loop to display all data
+            while(incomeRs.next()){
+                //
+                System.out.println(
+                        "\n Title of Income: " + incomeRs.getString("Income_Source") +
+                                "\n Predicted Income Amount: R" + incomeRs.getDouble("Expected_Amount") +
+                                "\n Actual Income Amount: R" + incomeRs.getDouble("Actual_Amount") +
+                                "\n Difference: R" + incomeRs.getDouble("difference") +
+                                "\n Date of income transaction: " + incomeRs.getDate("MI_Date")
+                );
+
+
+            }
+
+
+
+
+        }catch (SQLException e){
+            System.out.println("Database Related error has occurred" + e.getMessage());
+        }
+
+
+    }
 
     // Method to import income data by time
-    public void IncomeByTime(){}
+    public void IncomeByTime(String IncomeMonthInput){
+
+        // SQL script to import income data by time (Month)
+        String SQLIncomeMonthQuery = "SELECT * FROM monthlyincome WHERE LOWER(MONTHNAME(MI_Date)) LIKE ? OR LOWER(DATE_FORMAT(MI_Date, '%b')) LIKE ?";
+        String search = "%" +  IncomeMonthInput + "%";
+
+        try(Connection connection = DBConnection.getConnection();
+        PreparedStatement pstmt = connection.prepareStatement(SQLIncomeMonthQuery)){
+
+            pstmt.setString(1, search);
+            pstmt.setString(2, IncomeMonthInput);
+
+            ResultSet trs = pstmt.executeQuery();
+
+            // Displaying results
+            System.out.println("----------------------------------");
+            while(trs.next()){
+                System.out.println("\n<------->" +
+                        "\nTitle: " + trs.getString("Income_Source") + "\n" +
+                        "Expected Amount: R" + trs.getDouble("Expected_Amount") + "\n" +
+                        "Actual Amount: R: "+ trs.getDouble("Actual_Amount") + "\n" +
+                        "Difference: R" + trs.getDouble("difference") +
+                        "Income transaction date: " +  trs.getDate("MI_Date") + "\n" +
+                        "\n<------->"
+
+
+                );
+            }
+            System.out.println("----------------------------------");
+
+
+
+        } catch(SQLException e) {
+            System.out.println("Database Related error has occurred" + e.getMessage());
+        }
+
+
+    }
 
     // Method to dave income data into a csv file (backing up data)
     public void IncomeDocWriter(){}
@@ -259,6 +330,7 @@ public class DBAdmin {
 
 /*
 ** Note **
-*
-* Future versions of the application, it may be necessary to create a class to handle CSV file writing
+
+ Future versions of the application, it may be necessary to create a class to handle CSV file writing
+
  */

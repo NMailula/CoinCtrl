@@ -132,7 +132,7 @@ public class CoinCtrl {
 
             case 2:
                 System.out.println("\n** REVIEWING ALL INCOME DATA **");
-                FO.ReviewAllIncome();
+                DAN.ImportIncomeData();
                 break;
 
             case 3:

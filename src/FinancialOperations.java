@@ -19,7 +19,7 @@ public class FinancialOperations {
     // Method to handle operations to review expenses by time (Month)
     public void ReviewExpensesByTime(){
 
-        //
+        // Initialization of variables:
         String monthInput = "";
 
         while (true) {
@@ -216,14 +216,55 @@ public class FinancialOperations {
 
     // --------------------------------------------------------------------------
 
-    // Method to handle operations to review all income data
-    public void ReviewAllIncome(){}
-
    // Method to handle operations to review income data by time
-    public void ReviewIncomeByTime(){}
+    public void ReviewIncomeByTime(){
+
+        // Initialization of variables:
+        String IncomeMonthInput = "";
+
+        while (true) {
+
+            System.out.println("\n Enter month name to search for expense data (e.g. December or Dec)");
+            System.out.print("--> ");
+            IncomeMonthInput = input.nextLine().trim();
+
+            if (IncomeMonthInput.matches("[a-zA-Z]+( [a-zA-Z]+)*")){
+                break;
+            } else {
+                System.out.println("Invalid Title input!");
+
+            }
+        }
+
+        DAN.IncomeByTime(IncomeMonthInput);
+
+    }
 
     // Method to handle operations to add income data
-    public void AddIncome(){}
+    public void AddIncome(){
+
+        // Declaring variables (before user-interactive syntax)
+        LocalDate incomeDate = LocalDate.now();
+        String incomeSource;
+        double expectedAmount;
+        double actualAmount;
+
+        System.out.println("\n | Adding Income |");
+
+        // Source of expense
+        while (true) {}
+
+        // Expected amount
+        while (true) {}
+
+        // Actual Amount
+
+
+
+
+
+      //  DAN.MonthlyIncomeRecorder(incomeSource, expectedAmount, actualAmount, incomeDate);
+    }
 
     // -------------------------------------------------------------------------
 
