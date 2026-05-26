@@ -9,6 +9,7 @@ An application developed to record user's financial activities
 */
 
 // Importing libraries necessary
+import java.sql.SQLException;
 import java.util.Scanner;
 
 
@@ -22,7 +23,12 @@ public class CoinCtrl {
 
     
     // Main method to run/start the entire application
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws SQLException {
+
+        // Running data back-up processes before application start up
+        DAN.ExpenseDocWriter();
+        DAN.IncomeDocWriter();
+
 
 
         // Welcome message to the Application
@@ -113,7 +119,7 @@ public class CoinCtrl {
     }
 
     // Method to handle expense related operations
-    public static void Income()  {
+    public static void Income() throws SQLException {
 
         // Expenses sub-menu
         System.out.println("\n ------------------" + "\n 1) Record Income"+ "\n 2) Review ALL Income Data"
@@ -128,6 +134,7 @@ public class CoinCtrl {
             case 1:
                 System.out.println("\n** RECORDING INCOME DATA **");
                 FO.AddIncome();
+                DAN.ExpenseDocWriter();
                 break;
 
             case 2:

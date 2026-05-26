@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 // Data admin class -> Handles interaction between CoinCtrl's logic and the database
 public class DBAdmin {
@@ -202,7 +203,65 @@ public class DBAdmin {
     }
 
     // Method to save expense data into a CSV file (backing up data)
-  public void ExpenseDocWriter(){}
+  public void ExpenseDocWriter(){
+
+        // String query
+      String query = "SELECT * FROM dailyexpensetracker";
+
+      // filepath
+      String filePath = "expenses_export.csv";
+
+      try(Connection conn = DBConnection.getConnection();
+      Statement stmt = conn.createStatement();
+      ResultSet rs = stmt.executeQuery(query);
+      FileWriter writer = new FileWriter(filePath)){
+
+
+          // Get table metadata
+          ResultSetMetaData rsmd = rs.getMetaData();
+
+          int columnCount = rsmd.getColumnCount();
+
+          // Writing column headers
+          for(int i = 1; i <= columnCount; i++){
+
+              writer.append(rsmd.getColumnName(i));
+
+              if(i < columnCount){
+
+                  writer.append(",");
+              }
+          }
+          writer.append("\n");
+
+
+          // writing data directly to CSV
+          while(rs.next()){
+
+              for(int i = 1; i <= columnCount; i++){
+                  Object value = rs.getObject(i);
+
+                  writer.append(String.valueOf(value));
+
+                  if(i < columnCount){
+                      writer.append(",");
+                  }
+              }
+              writer.append("\n");
+          }
+
+          writer.flush();
+
+
+
+      }catch (SQLException e){
+          e.printStackTrace();
+      } catch (IOException e) {
+          throw new RuntimeException(e);
+      }
+
+
+  }
 
 
 
@@ -321,7 +380,63 @@ public class DBAdmin {
     }
 
     // Method to dave income data into a csv file (backing up data)
-    public void IncomeDocWriter(){}
+    public void IncomeDocWriter(){
+
+        // String query
+        String query = "SELECT * FROM monthlyincome";
+
+        // filepath
+        String filePath = "income_export.csv";
+
+        try(Connection conn = DBConnection.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            FileWriter writer = new FileWriter(filePath)){
+
+
+            // Get table metadata
+            ResultSetMetaData rsmd = rs.getMetaData();
+
+            int columnCount = rsmd.getColumnCount();
+
+            // Writing column headers
+            for(int i = 1; i <= columnCount; i++){
+
+                writer.append(rsmd.getColumnName(i));
+
+                if(i < columnCount){
+
+                    writer.append(",");
+                }
+            }
+            writer.append("\n");
+
+
+            // writing data directly to CSV
+            while(rs.next()){
+
+                for(int i = 1; i <= columnCount; i++){
+                    Object value = rs.getObject(i);
+
+                    writer.append(String.valueOf(value));
+
+                    if(i < columnCount){
+                        writer.append(",");
+                    }
+                }
+                writer.append("\n");
+            }
+
+            writer.flush();
+
+
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
     // ------------------------------------------------------------------------
