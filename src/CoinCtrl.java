@@ -32,7 +32,7 @@ public class CoinCtrl {
 
 
         // Welcome message to the Application
-        System.out.println(" \n*** Welcome to CoinCtrl ***" +
+        System.out.println("\n*** Welcome to CoinCtrl ***" +
                 "\n| A Personal Financial Journaling Application |");
 
         // Main Menu-Screen
@@ -71,7 +71,7 @@ public class CoinCtrl {
     // Method to handle expense related operations
     public static void Expenses()  {
 
-       int menuInput = 0;
+       int menuInput;
 
         // Expenses sub-menu
         System.out.println("\n ------------------" + "\n 1) Record Expenses"+ "\n 2) Review ALL Expense Data" + "\n 3) Review Expenses (By time)" +

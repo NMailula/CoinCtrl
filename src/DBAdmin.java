@@ -5,13 +5,10 @@
 
 // importing necessary libraries
 
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
+
 
 // Data admin class -> Handles interaction between CoinCtrl's logic and the database
 public class DBAdmin {
@@ -32,7 +29,7 @@ public class DBAdmin {
         String UploadDailyExpense = "INSERT INTO dailyexpensetracker (Title, Amount, Transaction_Date, Type) VALUES (?, ?, ? ,?)";
 
         try(Connection connection = dbConnection.getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(UploadDailyExpense);){
+        PreparedStatement preparedStatement = connection.prepareStatement(UploadDailyExpense)){
 
             preparedStatement.setString(1, title);
             preparedStatement.setDouble(2, amount);
@@ -92,7 +89,7 @@ public class DBAdmin {
         String search = "%" +  monthInput + "%";
 
         try(Connection connection = DBConnection.getConnection();
-        PreparedStatement stmt = connection.prepareStatement(MonthSQLQuery);
+        PreparedStatement stmt = connection.prepareStatement(MonthSQLQuery)
         ){
 
 
@@ -130,7 +127,7 @@ public class DBAdmin {
         String typeSQLQuery = "SELECT * FROM dailyexpenseTracker WHERE Type LIKE ?";
 
         try (Connection connection = DBConnection.getConnection();
-        PreparedStatement qstmt = connection.prepareStatement(typeSQLQuery);) {
+        PreparedStatement qstmt = connection.prepareStatement(typeSQLQuery)) {
 
             qstmt.setString(1, typeInput);
 
@@ -169,7 +166,7 @@ public class DBAdmin {
         String MonthTypeSQLQuery = "SELECT * FROM dailyexpenseTracker WHERE MONTHNAME(Transaction_Date) LIKE ? AND Type LIKE ?";
 
         try(Connection connection = DBConnection.getConnection();
-       PreparedStatement mstmt = connection.prepareStatement(MonthTypeSQLQuery);) {
+       PreparedStatement mstmt = connection.prepareStatement(MonthTypeSQLQuery)) {
 
 
             mstmt.setString(1, SpecifiedMonth);
@@ -280,7 +277,7 @@ public class DBAdmin {
 
         // Try-Catch block of code
         try(Connection connection = DBConnection.getConnection();
-            PreparedStatement pstmt = connection.prepareStatement(UploadIncomeData);){
+            PreparedStatement pstmt = connection.prepareStatement(UploadIncomeData)){
 
             //Uploading daily expenditure data
             pstmt.setString(1, incomeSource);

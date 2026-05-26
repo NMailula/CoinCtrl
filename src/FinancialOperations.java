@@ -1,6 +1,7 @@
 
 //
 import java.sql.Date;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -63,13 +64,7 @@ public class FinancialOperations {
 
         }
 
-
         DAN.ExpensesByType(typeInput);
-
-
-
-
-
     }
 
     // Method to handle operations to review expenses by both time and type
@@ -154,7 +149,6 @@ public class FinancialOperations {
              break;
             } else {
                 System.out.println("Invalid Title input!");
-
             }
         }
 
@@ -169,7 +163,7 @@ public class FinancialOperations {
             try{
 
                 System.out.println("\n Enter Amount of Expense (R)");
-                System.out.print("--> ");
+                System.out.print("--> R");
                 amount = input.nextDouble();
 
                 //
@@ -241,29 +235,94 @@ public class FinancialOperations {
     }
 
     // Method to handle operations to add income data
-    public void AddIncome(){
+    public void AddIncome() throws SQLException {
 
         // Declaring variables (before user-interactive syntax)
         LocalDate incomeDate = LocalDate.now();
-        String incomeSource;
-        double expectedAmount;
-        double actualAmount;
+        String incomeSource = "";
+        double expectedAmount = 0;
+        double actualAmount = 0;
 
         System.out.println("\n | Adding Income |");
 
         // Source of expense
-        while (true) {}
+        while (true) {
+
+            System.out.println("\n Title of income");
+
+            //
+            System.out.print("--> ");
+            incomeSource = input.nextLine().trim();
+
+            if (incomeSource.matches("[a-zA-Z]+( [a-zA-Z]+)*")){
+             break;
+            } else {
+                System.out.println("Invalid Title input!");
+            }
+
+
+        }
 
         // Expected amount
-        while (true) {}
+        boolean validInput = false;
+        double RestrictedAmount = 0;
+
+      while (!validInput) {
+
+          try{
+
+              System.out.println("\n Enter Expected Amount of Income (R)");
+              System.out.print("--> ");
+              expectedAmount = input.nextDouble();
+
+
+              //
+              if (expectedAmount < RestrictedAmount) {
+                  System.out.println("Invalid input! Expenses cannot be negative");
+              } else{
+                  validInput = true;
+              }
+
+
+          }catch (InputMismatchException e){
+              System.out.println("Invalid input! Enter proper input amount");
+          }
+
+      }
 
         // Actual Amount
+        boolean AAInput = false;
+
+        while (!AAInput) {
+
+            try{
+
+                System.out.println("\n Enter Actual Amount of Income (R)");
+                System.out.print("--> ");
+                actualAmount = input.nextDouble();
+
+
+                //
+                if (actualAmount < RestrictedAmount) {
+                    System.out.println("Invalid input! Expenses cannot be negative");
+                } else{
+                    AAInput = true;
+                }
+
+
+            }catch (InputMismatchException e){
+                System.out.println("Invalid input! Enter proper input amount");
+            }
+
+        }
 
 
 
 
 
-      //  DAN.MonthlyIncomeRecorder(incomeSource, expectedAmount, actualAmount, incomeDate);
+
+
+       DAN.MonthlyIncomeRecorder(incomeSource, expectedAmount, actualAmount, Date.valueOf(incomeDate));
     }
 
     // -------------------------------------------------------------------------
