@@ -286,6 +286,7 @@ public class DBAdmin {
             pstmt.setDate(4, incomeDate);
 
 
+            //
             int rowsAffected = pstmt.executeUpdate();
 
             // If data has been successfully upload to DB, a message should be printed out

@@ -16,6 +16,7 @@ import java.util.Scanner;
 // Main class of the CoinCtrl Application
 public class CoinCtrl {
 
+    //
     private static final Scanner CoinCtrl = new Scanner(System.in);
 
     static FinancialOperations FO = new FinancialOperations();
