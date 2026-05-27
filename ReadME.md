@@ -144,18 +144,25 @@ Upon specification of desired expense type, the application will parse the input
 
 - **ReviewExpensesByTNT()**
 
+This method allows users to review expense data specified with 2 parameters, a month value and expense-type value, both of which are inputs provided by the user.
+User's inputs will then be handled by the logic **(ExpenseByMonthType() method)**.
 
 - **AddExpenses()**
+
+This method's purpose is to allow users to add expense data such at title of expense and amount spent.
 
 
 **Income Logic**
 
+The income logic in this clas includes reviewing and adding income data. 
+The class allows users to review income data within a user-specified timeframe (month)
 
 - **ReviewIncomeByTime()**
 
 
 - **AddIncome()**
 
+This method allows users to record their income data into the database
 
 
 ---
