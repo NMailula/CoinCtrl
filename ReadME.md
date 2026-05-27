@@ -133,6 +133,7 @@ The class features a method to allows users to review expenses specified by both
 
 - **ReviewExpensesByTime()**
 
+This method allows users to import expenses data within a specified (month) time frame. Here, the user is prompted to provide a string input (name of a month)
 
 - **ReviewExpensesByType()**
 
