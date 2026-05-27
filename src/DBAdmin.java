@@ -47,6 +47,8 @@ public class DBAdmin {
             e.printStackTrace();
         }
 
+        ExpenseDocWriter();
+
     }
 
     // Method to import all expenses data (future version will allow user to specify time-frame such as month)
@@ -153,9 +155,6 @@ public class DBAdmin {
         }catch (SQLException e){
             e.printStackTrace();
         }
-
-
-
     }
 
 

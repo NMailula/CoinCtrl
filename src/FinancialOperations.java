@@ -12,7 +12,6 @@ public class FinancialOperations {
     private static final Scanner input = new Scanner(System.in);
 
    static DBAdmin DAN = new DBAdmin();
-   //static CoinCtrl CC = new CoinCtrl();
 
 
     // ----------------------------------------------------------------------------
@@ -328,4 +327,3 @@ public class FinancialOperations {
     // -------------------------------------------------------------------------
 
 }
-//

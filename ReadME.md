@@ -1,43 +1,185 @@
 # CoinCtrl
 
-- A personal financial budgeting application.
+**Summary of Project**
 
----
-## Functional Overview
- 
-**Core Purpose**
-
-- a financial journaling app that contains manual entries, contextual notes, and simple analytics to give users awareness and control over personal cash flow
+CoinCtrl is intended to be a financial journaling application, developed to allow users to record and read their financial activities on a monthly and daily basis.
+This application serves as **an advancement and encouragement of personal financial literacy**, for users to have 'control' of their financial activities. 
 
 ---
 
-## Current State of Application (Tuesday 05 May 2026)
+## Application Overview
 
-The current version of CoinCtrl has the following (working) functionalities/modules;
+## **System's functions**
 
-**=> Review Expenses Module**
+**Features**
+- Terminal-based interface
+- MySQL database integration via JDBC
+- Multiple functionalities (Including reading and writing to and from the database)
+- Basic UI
+---
 
-This module's purpose is to generate an expenses report. This version of the module returns all expense data, no seperation of the types of expenses (fixed or variable expenses).
-The Review Expenses Module displays all expenses (in the expenses database) in a list form (basic UI design)
+## Technologies Used
 
-<div align="center">
+Technology    | Purpose
+--------------|--------------
+Java (JDK 8+) | Application logic
+MySQL         | Database
+JDBC          | Database Connectivity
+IntelliJ IDEA | Development Environment
+SQL           | Data management
 
-<img src="" width="700">
-</div>
+---
 
-Moving forward, the module should/will separate the expenses by type, as well as displaying data in a table format. The module should display expenses for a specified timeframe.
+## Project Structures
+````
+CoinCtrl 
+||
+|| === Screenshots
+||
+|| === src
+||     || === CoinCtrl.java
+||     || === DBAdmin.java
+||     || === DBConnection.java
+||     || === FinancialOperations.java  
+||
+||
+|| === ReadME.md
+|| === expenses_export.csv
+|| === income_export.csv
+````
+--- 
 
-**=> Record Daily Expense Module**
+## Class Overview
 
-This module's purpose is to allow the user to record their expenses, specifically the title of expense, its amount and expense type (Variable or fixed).
+**CoinCtrl.java**
 
-The current version of the module
-
-<div align="center">
-
-
-</div>
-
-**=> Income Recorder Module**
+This class serves as the main class which initiates user interaction with the CoinCtrl logic.
+The user interacts with a menu-screen, which will appropriately lead the user to the 'back-end' logic;
 
 
+- **main() method**
+
+This method first runs a data backing-up operations (ExpenseDocWriter() ---> DBAdmin.java), which backs ups data from the database into CSV files. This version of application loads expense and income data into 2 separate CSV files.
+This method serves as the main menu (start screen UI in the terminal), where the user will pick 1 of 3 options; Income, Expenses and Overall Finances. 
+In this version of CoinCtrl, overall finances option is unavailable (not yet developed).
+
+- **Expenses()**
+
+This method presents a sub-menu screen where the user can choose whether they would like to record or review expense data (options include reviewing all data, or specified data type or time).
+
+
+- **Income()**
+- 
+  This method presents a sub-menu screen where the user can choose whether they would like to record or review income data (options include reviewing all data or specified time).
+
+---
+
+**DBAdmin.java**
+
+The main purpose of this class is to process data from the user and database. 
+This class allows the application to import or upload specified data values.
+
+- **DailyExpenseRecorder()**
+
+
+- **DEDataImport()**
+
+
+- **ExpensesByTime()**
+
+
+- **ExpensesByType()**
+
+
+- **ExpensesByMonthType()**
+
+
+- **ExpenseDocWriter()**
+
+
+- **MonthlyIncomeRecorder()**
+
+
+- **ImportIncomeData()**
+
+
+- **IncomeByTime()**
+
+
+- **IncomeDocWriter()**
+
+
+---
+
+**DBConnection.java**
+
+This class manages the connection between the application and the MySQL database through the use of the JDBC library.
+
+- **getConnection()**
+This method creates the Java-Database connection with the use of specified DB credentials.
+
+---
+
+**FinancialOperations.java**
+
+This class contains the logic to process multiple inputs in relation to the user's desired operations.
+This class handles the logic to review or add expense/income data. 
+
+**Expenses Logic**
+
+The expenses logic in this class include reviewing expenses by time, where the user is asked to specify the desired expense data to import from the DB by the month.
+The class also allows a user to review their expenses by specifying type of expense (i.e. Variable or fixed expenses).
+The class features a method to allows users to review expenses specified by both time and type of expenses. Additionally, the class allows users to record (add) expense data into the database.
+
+- **ReviewExpensesByTime()**
+
+
+- **ReviewExpensesByType()**
+
+
+- **ReviewExpensesByTNT()**
+
+
+- **AddExpenses()**
+
+
+**Income Logic**
+
+
+- **ReviewIncomeByTime()**
+
+
+- **AddIncome()**
+
+
+
+---
+
+## **Diagram of CoinCtrl's Operations (summarized)**
+````
+CoinCtrl.java |==> main()
+               ||
+               ||====> Expenses() 
+               ||              ||
+               ||              ||==========>| FinancialOperations.java |================================================>||                                                    
+               ||                                             ||==> ReviewExpensesByTime() =============================>||                     ||===> DailyExpenseRecorder()
+               ||                                             ||==> ReviewExpensesByType() =============================>||                     ||===> DEDataImport()
+               ||                                             ||==> ReviewExepnsesByTNT() ==============================>||                     ||===> ExpensesByTime()
+               ||                                             ||==> AddExpenses()=======================================>||=> |DBAdmin.java|====||===> ExpensesByType()
+               ||                                             ||                                                         ||                     ||===> ExpensesByMonthType()
+               ||                                             ||==> ReviewIncomeByTime()  ==============================>||                     ||===> ExpenseDocWriter()
+               ||                                             ||==> AddIncome()=========================================>||                     ||===> MonthlyIncomeRecorder()
+               ||                                             ||                                                         ||                     ||===> ImportIncomeData()
+               ||===> Income()================================|| ========================================================||                     ||===> IncomeByTime()
+                                                                                                                                                ||===> IncomeDocWriter()
+````
+
+
+
+
+
+
+## Contributions
+
+- **Project author: Nathi Mailula**
+- **Developed: May 2026**

@@ -16,9 +16,10 @@ import java.util.Scanner;
 // Main class of the CoinCtrl Application
 public class CoinCtrl {
 
-    //
+    // Initializing the scanner object
     private static final Scanner CoinCtrl = new Scanner(System.in);
 
+    // Initializing classes as new objects
     static FinancialOperations FO = new FinancialOperations();
     static DBAdmin DAN = new DBAdmin();
 
@@ -153,6 +154,4 @@ public class CoinCtrl {
         }
     }
 
-    // Method to handle operations for overall finances
-   // public static void OverallFinances(){}
 }
