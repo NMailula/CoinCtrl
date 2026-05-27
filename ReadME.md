@@ -133,10 +133,14 @@ The class features a method to allows users to review expenses specified by both
 
 - **ReviewExpensesByTime()**
 
-This method allows users to import expenses data within a specified (month) time frame. Here, the user is prompted to provide a string input (name of a month)
+This method allows users to import expenses data within a specified (month) time frame. 
+Here, the user is prompted to provide a string input (name of a month), and upon submission, the input will then be parsed to the appropriate logic **(ExpensesByTime() method)** in the DBAdmin.java class.
 
 - **ReviewExpensesByType()**
 
+This method allows users to import expense data specified by type, i.e. **Variable or Fixed** expense data.
+In this method, the user will be prompted to choose whether to import expense data by type, i.e. Fixed or Variable expenses.
+Upon specification of desired expense type, the application will parse the input data to the appropriate method **(ExpensesByType() method)** in the DBAdmin.java class.
 
 - **ReviewExpensesByTNT()**
 
