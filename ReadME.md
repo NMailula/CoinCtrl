@@ -57,7 +57,7 @@ This class serves as the main class which initiates user interaction with the Co
 The user interacts with a menu-screen, which will appropriately lead the user to the 'back-end' logic;
 
 
-- **main() method**
+- **main()**
 
 This method first runs a data backing-up operations (ExpenseDocWriter() ---> DBAdmin.java), which backs ups data from the database into CSV files. This version of application loads expense and income data into 2 separate CSV files.
 This method serves as the main menu (start screen UI in the terminal), where the user will pick 1 of 3 options; Income, Expenses and Overall Finances. 
