@@ -13,8 +13,6 @@ import java.sql.*;
 // Data admin class -> Handles interaction between CoinCtrl's logic and the database
 public class DBAdmin {
 
-
-
     // Methods for Expenses-related DB operations
 
     //**---------------------------------------------------------------------------------------------------------**

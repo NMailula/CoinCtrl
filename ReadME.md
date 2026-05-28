@@ -51,7 +51,7 @@ CoinCtrl
 
 ## Class Overview
 
-**CoinCtrl.java**
+## **CoinCtrl.java**
 
 This class serves as the main class which initiates user interaction with the CoinCtrl logic.
 The user interacts with a menu-screen, which will appropriately lead the user to the 'back-end' logic;
@@ -69,58 +69,71 @@ This method presents a sub-menu screen where the user can choose whether they wo
 
 
 - **Income()**
-- 
+
   This method presents a sub-menu screen where the user can choose whether they would like to record or review income data (options include reviewing all data or specified time).
 
 ---
 
-**DBAdmin.java**
+## **DBAdmin.java**
 
 The main purpose of this class is to process data from the user and database. 
 This class allows the application to import or upload specified data values.
 
 - **DailyExpenseRecorder()**
 
+THis method handles the logic to record user-provided expense data into the database
 
 - **DEDataImport()**
 
+This method handles the logic to import **ALL** expense data and display it on the terminal window.
 
 - **ExpensesByTime()**
 
+This method handles the logic to import expense data within a specified timeframe (month).
 
 - **ExpensesByType()**
 
+THis method handles the logic to import all expense data  with a specified expense type (Fixed or  Variable).
 
 - **ExpensesByMonthType()**
 
+This method handles the logic to import time and type-specified expense data from the database and display it on the terminal window
 
 - **ExpenseDocWriter()**
 
+This method handles the logic to back up all expense data from the database.
+The expense data is written into a CSV file.
 
 - **MonthlyIncomeRecorder()**
 
+This method handles the logic to upload user-provided income data into the database
 
 - **ImportIncomeData()**
 
+This method contains logic to import **ALL** income data from the database
 
 - **IncomeByTime()**
 
+This method contains the logic to import time-specified data from the MySQL database 
 
 - **IncomeDocWriter()**
 
+This method handles the logic to back up all income data from the database.
+The income data is written into a CSV file.
 
 ---
 
-**DBConnection.java**
+## **DBConnection.java**
 
 This class manages the connection between the application and the MySQL database through the use of the JDBC library.
 
 - **getConnection()**
+
 This method creates the Java-Database connection with the use of specified DB credentials.
 
 ---
 
-**FinancialOperations.java**
+## **FinancialOperations.java**
 
 This class contains the logic to process multiple inputs in relation to the user's desired operations.
 This class handles the logic to review or add expense/income data. 
@@ -159,10 +172,14 @@ The class allows users to review income data within a user-specified timeframe (
 
 - **ReviewIncomeByTime()**
 
+This method contains the logic to process user's input data to determine the timeframe of Income data they would like to review.
+Users will provide input in the form of a month (String value).
 
 - **AddIncome()**
 
-This method allows users to record their income data into the database
+This method allows users to record their income data into the database.
+The user-provided data includes the source of income (or title), the expected amount and actual amount received.
+THe Database handles the mathematical logic to calculate the difference between expected and actual income data.
 
 
 ---
