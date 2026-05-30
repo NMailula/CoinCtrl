@@ -186,7 +186,7 @@ THe Database handles the mathematical logic to calculate the difference between 
 
 ## **Diagram of CoinCtrl's Operations (summarized)**
 ````
-CoinCtrl.java |==> main()
+CoinCtrl.java>main()
                ||
                ||====> Expenses() 
                ||              ||
@@ -202,10 +202,6 @@ CoinCtrl.java |==> main()
                ||===> Income()================================|| ========================================================||                     ||===> IncomeByTime()
                                                                                                                                                 ||===> IncomeDocWriter()
 ````
-
-
-
-
 
 
 ## Contributions
