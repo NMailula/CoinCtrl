@@ -1,247 +1,247 @@
 Transaction_ID,Title,Amount,Transaction_Date,Type
-4000,Checkers,350.00,2026-04-28,Variable
-4001,Gym Membership,440.00,2026-04-28,Fixed
-4002,Khanya Cologne,120.00,2026-04-28,Variable
-4003,PnP Drinks,2098.00,2026-04-28,Variable
-4004,Sanitation,70.00,2026-04-28,Fixed
-4005,Eggs,120.00,2026-04-28,Fixed
-4006,Clothes,500.00,2026-04-28,fixed
-4007,Dischem (Headphones),300.00,2026-05-06,Fixed
-4008,Checkers,350.00,2026-04-28,Variable
-4009,Gym Membership,440.00,2026-04-28,Fixed
-4010,Khanya Cologne,120.00,2026-04-28,Variable
-4011,PnP Drinks,2098.00,2026-04-28,Variable
-4012,Sanitation,70.00,2026-04-28,Fixed
-4013,Eggs,120.00,2026-04-28,Fixed
-4014,Clothes,500.00,2026-04-28,Fixed
-4015,Dischem Headphones,300.00,2026-05-06,Fixed
-4016,Uber Ride,95.00,2026-05-07,Variable
-4017,Netflix,159.00,2026-05-07,Fixed
-4018,Electricity,850.00,2026-05-08,Fixed
-4019,WiFi Subscription,699.00,2026-05-08,Fixed
-4020,KFC Lunch,140.00,2026-05-08,Variable
-4021,Steam Game,420.00,2026-05-09,Variable
-4022,Fuel,1100.00,2026-05-09,Variable
-4023,Water Bill,300.00,2026-05-09,Fixed
-4024,Spotify,69.99,2026-05-10,Fixed
-4025,Pick n Pay Groceries,980.00,2026-05-10,Variable
-4026,Movie Tickets,220.00,2026-05-10,Variable
-4027,Protein Powder,799.00,2026-05-11,Variable
-4028,Chicken Breast,250.00,2026-05-11,Variable
-4029,Rice Bag,180.00,2026-05-11,Fixed
-4030,Taxi Fare,75.00,2026-05-12,Variable
-4031,Laptop Repair,1500.00,2026-05-12,Variable
-4032,Java Course,1200.00,2026-05-12,Fixed
-4033,Coffee,45.00,2026-05-13,Variable
-4034,Campus Lunch,90.00,2026-05-13,Variable
-4035,Phone Airtime,150.00,2026-05-13,Fixed
-4036,Data Bundle,199.00,2026-05-13,Fixed
-4037,Birthday Gift,600.00,2026-05-14,Variable
-4038,Shoes,950.00,2026-05-14,Variable
-4039,Laundry,130.00,2026-05-14,Fixed
-4040,Haircut,100.00,2026-05-15,Variable
-4041,Medicine,240.00,2026-05-15,Variable
-4042,Pizza,180.00,2026-05-15,Variable
-4043,McDonalds,110.00,2026-05-16,Variable
-4044,Savings Deposit,2000.00,2026-05-16,Fixed
-4045,Electric Kettle,450.00,2026-05-16,Variable
-4046,USB Cable,89.00,2026-05-17,Variable
-4047,Keyboard,650.00,2026-05-17,Variable
-4048,Mouse,320.00,2026-05-17,Variable
-4049,Monitor Stand,550.00,2026-05-18,Variable
-4050,Gym Gloves,200.00,2026-05-18,Variable
-4051,Creatine,400.00,2026-05-18,Variable
-4052,Rent,4500.00,2026-05-19,Fixed
-4053,Insurance,1200.00,2026-05-19,Fixed
-4054,Bank Charges,85.00,2026-05-19,Fixed
-4055,Ice Cream,60.00,2026-05-20,Variable
-4056,Books,980.00,2026-05-20,Variable
-4057,Pen and Paper,75.00,2026-05-20,Fixed
-4058,Printer Ink,420.00,2026-05-21,Variable
-4059,USB Drive,160.00,2026-05-21,Variable
-4060,Discord Nitro,99.00,2026-05-21,Fixed
-4061,Burger King,135.00,2026-05-22,Variable
-4062,Coke Pack,95.00,2026-05-22,Variable
-4063,Milk,35.00,2026-05-22,Fixed
-4064,Bread,18.00,2026-05-22,Fixed
-4065,Toothpaste,42.00,2026-05-23,Fixed
-4066,Soap,30.00,2026-05-23,Fixed
-4067,Candles,55.00,2026-05-23,Variable
-4068,Android Studio Book,760.00,2026-05-24,Variable
-4069,Domain Hosting,999.00,2026-05-24,Fixed
-4070,GitHub Copilot,190.00,2026-05-24,Fixed
-4071,Energy Drink,28.00,2026-05-25,Variable
-4072,Fruit Juice,45.00,2026-05-25,Variable
-4073,Headphones,899.00,2026-05-25,Variable
-4074,Phone Charger,150.00,2026-05-26,Variable
-4075,Screen Protector,80.00,2026-05-26,Variable
-4076,Tablet Cover,210.00,2026-05-26,Variable
-4077,Car Wash,120.00,2026-05-27,Variable
-4078,Parking Fee,40.00,2026-05-27,Variable
-4079,Petrol,1300.00,2026-05-27,Variable
-4080,Water Bottle,25.00,2026-05-28,Variable
-4081,Dinner Date,780.00,2026-05-28,Variable
-4082,Taxi,60.00,2026-05-28,Variable
-4083,Movie Rental,55.00,2026-05-29,Variable
-4084,Laundry Soap,65.00,2026-05-29,Fixed
-4085,Light Bulbs,140.00,2026-05-29,Fixed
-4086,Office Chair,2200.00,2026-05-30,Variable
-4087,Desk Lamp,320.00,2026-05-30,Variable
-4088,Notebook,40.00,2026-05-30,Fixed
-4089,Pasta,55.00,2026-05-31,Fixed
-4090,Tomato Sauce,30.00,2026-05-31,Fixed
-4091,Chicken Wings,160.00,2026-05-31,Variable
-4092,Coffee Beans,190.00,2026-06-01,Variable
-4093,Tea Bags,50.00,2026-06-01,Fixed
-4094,Online Course,899.00,2026-06-01,Variable
-4095,Webcam,720.00,2026-06-02,Variable
-4096,Microphone,1250.00,2026-06-02,Variable
-4097,Mouse Pad,110.00,2026-06-02,Variable
-4098,Gym Shorts,260.00,2026-06-03,Variable
-4099,Socks,90.00,2026-06-03,Fixed
-4100,T-Shirts,450.00,2026-06-03,Variable
-4101,Power Bank,600.00,2026-06-04,Variable
-4102,Bluetooth Speaker,980.00,2026-06-04,Variable
-4103,Coding Stickers,70.00,2026-06-04,Variable
-4104,Exam Registration,1500.00,2026-06-05,Fixed
-4105,Stationery,230.00,2026-06-05,Fixed
-4106,Snacks,85.00,2026-06-05,Variable
-4107,Uber Eats,240.00,2026-06-06,Variable
-4108,Gaming Mouse,780.00,2026-06-06,Variable
-4109,SSD Upgrade,1850.00,2026-06-06,Variable
-4110,RAM Upgrade,2400.00,2026-06-07,Variable
-4111,Printer Paper,120.00,2026-06-07,Fixed
-4112,Face Wash,65.00,2026-06-07,Fixed
-4113,Groceries,1450.00,2026-06-08,Variable
-4114,Checkers,350.00,2026-04-28,Variable
-4115,Gym Membership,440.00,2026-04-28,Fixed
-4116,Khanya Cologne,120.00,2026-04-28,Variable
-4117,PnP Drinks,2098.00,2026-04-28,Variable
-4118,Sanitation,70.00,2026-04-28,Fixed
-4119,Eggs,120.00,2026-04-28,Fixed
-4120,Clothes,500.00,2026-04-28,Fixed
-4121,Dischem Headphones,300.00,2026-05-06,Fixed
-4122,Uber Ride,95.00,2026-05-07,Variable
-4123,Netflix,159.00,2026-05-07,Fixed
-4124,Electricity,850.00,2026-05-08,Fixed
-4125,WiFi Subscription,699.00,2026-05-08,Fixed
-4126,KFC Lunch,140.00,2026-05-08,Variable
-4127,Steam Game,420.00,2026-05-09,Variable
-4128,Fuel,1100.00,2026-05-09,Variable
-4129,Water Bill,300.00,2026-05-09,Fixed
-4130,Spotify,69.99,2026-05-10,Fixed
-4131,Pick n Pay Groceries,980.00,2026-05-10,Variable
-4132,Movie Tickets,220.00,2026-05-10,Variable
-4133,Protein Powder,799.00,2026-05-11,Variable
-4134,Chicken Breast,250.00,2026-05-11,Variable
-4135,Rice Bag,180.00,2026-05-11,Fixed
-4136,Taxi Fare,75.00,2026-05-12,Variable
-4137,Laptop Repair,1500.00,2026-05-12,Variable
-4138,Java Course,1200.00,2026-05-12,Fixed
-4139,Coffee,45.00,2026-05-13,Variable
-4140,Campus Lunch,90.00,2026-05-13,Variable
-4141,Phone Airtime,150.00,2026-05-13,Fixed
-4142,Data Bundle,199.00,2026-05-13,Fixed
-4143,Birthday Gift,600.00,2026-05-14,Variable
-4144,Shoes,950.00,2026-05-14,Variable
-4145,Laundry,130.00,2026-05-14,Fixed
-4146,Haircut,100.00,2026-05-15,Variable
-4147,Medicine,240.00,2026-05-15,Variable
-4148,Pizza,180.00,2026-05-15,Variable
-4149,McDonalds,110.00,2026-05-16,Variable
-4150,Savings Deposit,2000.00,2026-05-16,Fixed
-4151,Electric Kettle,450.00,2026-05-16,Variable
-4152,USB Cable,89.00,2026-05-17,Variable
-4153,Keyboard,650.00,2026-05-17,Variable
-4154,Mouse,320.00,2026-05-17,Variable
-4155,Monitor Stand,550.00,2026-05-18,Variable
-4156,Gym Gloves,200.00,2026-05-18,Variable
-4157,Creatine,400.00,2026-05-18,Variable
-4158,Rent,4500.00,2026-05-19,Fixed
-4159,Insurance,1200.00,2026-05-19,Fixed
-4160,Bank Charges,85.00,2026-05-19,Fixed
-4161,Ice Cream,60.00,2026-05-20,Variable
-4162,Books,980.00,2026-05-20,Variable
-4163,Pen and Paper,75.00,2026-05-20,Fixed
-4164,Printer Ink,420.00,2026-05-21,Variable
-4165,USB Drive,160.00,2026-05-21,Variable
-4166,Discord Nitro,99.00,2026-05-21,Fixed
-4167,Burger King,135.00,2026-05-22,Variable
-4168,Coke Pack,95.00,2026-05-22,Variable
-4169,Milk,35.00,2026-05-22,Fixed
-4170,Bread,18.00,2026-05-22,Fixed
-4171,Toothpaste,42.00,2026-05-23,Fixed
-4172,Soap,30.00,2026-05-23,Fixed
-4173,Candles,55.00,2026-05-23,Variable
-4174,Android Studio Book,760.00,2026-05-24,Variable
-4175,Domain Hosting,999.00,2026-05-24,Fixed
-4176,GitHub Copilot,190.00,2026-05-24,Fixed
-4177,Energy Drink,28.00,2026-05-25,Variable
-4178,Fruit Juice,45.00,2026-05-25,Variable
-4179,Headphones,899.00,2026-05-25,Variable
-4180,Phone Charger,150.00,2026-05-26,Variable
-4181,Screen Protector,80.00,2026-05-26,Variable
-4182,Tablet Cover,210.00,2026-05-26,Variable
-4183,Car Wash,120.00,2026-05-27,Variable
-4184,Parking Fee,40.00,2026-05-27,Variable
-4185,Petrol,1300.00,2026-05-27,Variable
-4186,Water Bottle,25.00,2026-05-28,Variable
-4187,Dinner Date,780.00,2026-05-28,Variable
-4188,Taxi,60.00,2026-05-28,Variable
-4189,Movie Rental,55.00,2026-05-29,Variable
-4190,Laundry Soap,65.00,2026-05-29,Fixed
-4191,Light Bulbs,140.00,2026-05-29,Fixed
-4192,Office Chair,2200.00,2026-05-30,Variable
-4193,Desk Lamp,320.00,2026-05-30,Variable
-4194,Notebook,40.00,2026-05-30,Fixed
-4195,Pasta,55.00,2026-05-31,Fixed
-4196,Tomato Sauce,30.00,2026-05-31,Fixed
-4197,Chicken Wings,160.00,2026-05-31,Variable
-4198,Coffee Beans,190.00,2026-06-01,Variable
-4199,Tea Bags,50.00,2026-06-01,Fixed
-4200,Online Course,899.00,2026-06-01,Variable
-4201,Webcam,720.00,2026-06-02,Variable
-4202,Microphone,1250.00,2026-06-02,Variable
-4203,Mouse Pad,110.00,2026-06-02,Variable
-4204,Gym Shorts,260.00,2026-06-03,Variable
-4205,Socks,90.00,2026-06-03,Fixed
-4206,T-Shirts,450.00,2026-06-03,Variable
-4207,Power Bank,600.00,2026-06-04,Variable
-4208,Bluetooth Speaker,980.00,2026-06-04,Variable
-4209,Coding Stickers,70.00,2026-06-04,Variable
-4210,Exam Registration,1500.00,2026-06-05,Fixed
-4211,Stationery,230.00,2026-06-05,Fixed
-4212,Snacks,85.00,2026-06-05,Variable
-4213,Uber Eats,240.00,2026-06-06,Variable
-4214,Gaming Mouse,780.00,2026-06-06,Variable
-4215,SSD Upgrade,1850.00,2026-06-06,Variable
-4216,RAM Upgrade,2400.00,2026-06-07,Variable
-4217,Printer Paper,120.00,2026-06-07,Fixed
-4218,Face Wash,65.00,2026-06-07,Fixed
-4219,Groceries,1450.00,2026-06-08,Variable
-4220,Gym Membership,440.00,2026-01-05,Fixed
-4221,Rent,4500.00,2026-01-01,Fixed
-4222,Electricity,780.00,2026-01-15,Fixed
-4223,Groceries,1250.00,2026-01-20,Variable
-4224,Gym Membership,440.00,2026-02-05,Fixed
-4225,Rent,4500.00,2026-02-01,Fixed
-4226,Fuel,1350.00,2026-02-12,Variable
-4227,Netflix,159.00,2026-02-18,Fixed
-4228,Gym Membership,440.00,2026-03-05,Fixed
-4229,WiFi Subscription,699.00,2026-03-07,Fixed
-4230,Checkers Groceries,980.00,2026-03-14,Variable
-4231,Steam Game,560.00,2026-03-22,Variable
-4232,Gym Membership,440.00,2026-04-05,Fixed
-4233,Electricity,920.00,2026-04-11,Fixed
-4234,Uber Ride,120.00,2026-04-16,Variable
-4235,Protein Powder,850.00,2026-04-25,Variable
-4236,Gym Membership,440.00,2026-05-05,Fixed
-4237,Rent,4500.00,2026-05-01,Fixed
-4238,Data Bundle,199.00,2026-05-09,Fixed
-4239,Movie Tickets,260.00,2026-05-28,Variable
-4240,CoinCtrl,120.00,2026-05-17,Variable
-4241,Afgri,45.20,2026-05-18,Fixed
-4242,Qwerty,23.00,2026-05-18,Variable
-4243,Java,2500.00,2026-05-19,Variable
-4244,Hydrocholic Acid,50.00,2026-05-19,fixed
-4245,Boston City Campus,19000.00,2026-05-20,Fixed
+4000,Checkers,350,4/28/2026,Variable
+4001,Gym Membership,440,4/28/2026,Fixed
+4002,Khanya Cologne,120,4/28/2026,Variable
+4003,PnP Drinks,2098,4/28/2026,Variable
+4004,Sanitation,70,4/28/2026,Fixed
+4005,Eggs,120,4/28/2026,Fixed
+4006,Clothes,500,4/28/2026,fixed
+4007,Dischem (Headphones),300,5/6/2026,Fixed
+4008,Checkers,350,4/28/2026,Variable
+4009,Gym Membership,440,4/28/2026,Fixed
+4010,Khanya Cologne,120,4/28/2026,Variable
+4011,PnP Drinks,2098,4/28/2026,Variable
+4012,Sanitation,70,4/28/2026,Fixed
+4013,Eggs,120,4/28/2026,Fixed
+4014,Clothes,500,4/28/2026,Fixed
+4015,Dischem Headphones,300,5/6/2026,Fixed
+4016,Uber Ride,95,5/7/2026,Variable
+4017,Netflix,159,5/7/2026,Fixed
+4018,Electricity,850,5/8/2026,Fixed
+4019,WiFi Subscription,699,5/8/2026,Fixed
+4020,KFC Lunch,140,5/8/2026,Variable
+4021,Steam Game,420,5/9/2026,Variable
+4022,Fuel,1100,5/9/2026,Variable
+4023,Water Bill,300,5/9/2026,Fixed
+4024,Spotify,69.99,5/10/2026,Fixed
+4025,Pick n Pay Groceries,980,5/10/2026,Variable
+4026,Movie Tickets,220,5/10/2026,Variable
+4027,Protein Powder,799,5/11/2026,Variable
+4028,Chicken Breast,250,5/11/2026,Variable
+4029,Rice Bag,180,5/11/2026,Fixed
+4030,Taxi Fare,75,5/12/2026,Variable
+4031,Laptop Repair,1500,5/12/2026,Variable
+4032,Java Course,1200,5/12/2026,Fixed
+4033,Coffee,45,5/13/2026,Variable
+4034,Campus Lunch,90,5/13/2026,Variable
+4035,Phone Airtime,150,5/13/2026,Fixed
+4036,Data Bundle,199,5/13/2026,Fixed
+4037,Birthday Gift,600,5/14/2026,Variable
+4038,Shoes,950,5/14/2026,Variable
+4039,Laundry,130,5/14/2026,Fixed
+4040,Haircut,100,5/15/2026,Variable
+4041,Medicine,240,5/15/2026,Variable
+4042,Pizza,180,5/15/2026,Variable
+4043,McDonalds,110,5/16/2026,Variable
+4044,Savings Deposit,2000,5/16/2026,Fixed
+4045,Electric Kettle,450,5/16/2026,Variable
+4046,USB Cable,89,5/17/2026,Variable
+4047,Keyboard,650,5/17/2026,Variable
+4048,Mouse,320,5/17/2026,Variable
+4049,Monitor Stand,550,5/18/2026,Variable
+4050,Gym Gloves,200,5/18/2026,Variable
+4051,Creatine,400,5/18/2026,Variable
+4052,Rent,4500,5/19/2026,Fixed
+4053,Insurance,1200,5/19/2026,Fixed
+4054,Bank Charges,85,5/19/2026,Fixed
+4055,Ice Cream,60,5/20/2026,Variable
+4056,Books,980,5/20/2026,Variable
+4057,Pen and Paper,75,5/20/2026,Fixed
+4058,Printer Ink,420,5/21/2026,Variable
+4059,USB Drive,160,5/21/2026,Variable
+4060,Discord Nitro,99,5/21/2026,Fixed
+4061,Burger King,135,5/22/2026,Variable
+4062,Coke Pack,95,5/22/2026,Variable
+4063,Milk,35,5/22/2026,Fixed
+4064,Bread,18,5/22/2026,Fixed
+4065,Toothpaste,42,5/23/2026,Fixed
+4066,Soap,30,5/23/2026,Fixed
+4067,Candles,55,5/23/2026,Variable
+4068,Android Studio Book,760,5/24/2026,Variable
+4069,Domain Hosting,999,5/24/2026,Fixed
+4070,GitHub Copilot,190,5/24/2026,Fixed
+4071,Energy Drink,28,5/25/2026,Variable
+4072,Fruit Juice,45,5/25/2026,Variable
+4073,Headphones,899,5/25/2026,Variable
+4074,Phone Charger,150,5/26/2026,Variable
+4075,Screen Protector,80,5/26/2026,Variable
+4076,Tablet Cover,210,5/26/2026,Variable
+4077,Car Wash,120,5/27/2026,Variable
+4078,Parking Fee,40,5/27/2026,Variable
+4079,Petrol,1300,5/27/2026,Variable
+4080,Water Bottle,25,5/28/2026,Variable
+4081,Dinner Date,780,5/28/2026,Variable
+4082,Taxi,60,5/28/2026,Variable
+4083,Movie Rental,55,5/29/2026,Variable
+4084,Laundry Soap,65,5/29/2026,Fixed
+4085,Light Bulbs,140,5/29/2026,Fixed
+4086,Office Chair,2200,5/30/2026,Variable
+4087,Desk Lamp,320,5/30/2026,Variable
+4088,Notebook,40,5/30/2026,Fixed
+4089,Pasta,55,5/31/2026,Fixed
+4090,Tomato Sauce,30,5/31/2026,Fixed
+4091,Chicken Wings,160,5/31/2026,Variable
+4092,Coffee Beans,190,6/1/2026,Variable
+4093,Tea Bags,50,6/1/2026,Fixed
+4094,Online Course,899,6/1/2026,Variable
+4095,Webcam,720,6/2/2026,Variable
+4096,Microphone,1250,6/2/2026,Variable
+4097,Mouse Pad,110,6/2/2026,Variable
+4098,Gym Shorts,260,6/3/2026,Variable
+4099,Socks,90,6/3/2026,Fixed
+4100,T-Shirts,450,6/3/2026,Variable
+4101,Power Bank,600,6/4/2026,Variable
+4102,Bluetooth Speaker,980,6/4/2026,Variable
+4103,Coding Stickers,70,6/4/2026,Variable
+4104,Exam Registration,1500,6/5/2026,Fixed
+4105,Stationery,230,6/5/2026,Fixed
+4106,Snacks,85,6/5/2026,Variable
+4107,Uber Eats,240,6/6/2026,Variable
+4108,Gaming Mouse,780,6/6/2026,Variable
+4109,SSD Upgrade,1850,6/6/2026,Variable
+4110,RAM Upgrade,2400,6/7/2026,Variable
+4111,Printer Paper,120,6/7/2026,Fixed
+4112,Face Wash,65,6/7/2026,Fixed
+4113,Groceries,1450,6/8/2026,Variable
+4114,Checkers,350,4/28/2026,Variable
+4115,Gym Membership,440,4/28/2026,Fixed
+4116,Khanya Cologne,120,4/28/2026,Variable
+4117,PnP Drinks,2098,4/28/2026,Variable
+4118,Sanitation,70,4/28/2026,Fixed
+4119,Eggs,120,4/28/2026,Fixed
+4120,Clothes,500,4/28/2026,Fixed
+4121,Dischem Headphones,300,5/6/2026,Fixed
+4122,Uber Ride,95,5/7/2026,Variable
+4123,Netflix,159,5/7/2026,Fixed
+4124,Electricity,850,5/8/2026,Fixed
+4125,WiFi Subscription,699,5/8/2026,Fixed
+4126,KFC Lunch,140,5/8/2026,Variable
+4127,Steam Game,420,5/9/2026,Variable
+4128,Fuel,1100,5/9/2026,Variable
+4129,Water Bill,300,5/9/2026,Fixed
+4130,Spotify,69.99,5/10/2026,Fixed
+4131,Pick n Pay Groceries,980,5/10/2026,Variable
+4132,Movie Tickets,220,5/10/2026,Variable
+4133,Protein Powder,799,5/11/2026,Variable
+4134,Chicken Breast,250,5/11/2026,Variable
+4135,Rice Bag,180,5/11/2026,Fixed
+4136,Taxi Fare,75,5/12/2026,Variable
+4137,Laptop Repair,1500,5/12/2026,Variable
+4138,Java Course,1200,5/12/2026,Fixed
+4139,Coffee,45,5/13/2026,Variable
+4140,Campus Lunch,90,5/13/2026,Variable
+4141,Phone Airtime,150,5/13/2026,Fixed
+4142,Data Bundle,199,5/13/2026,Fixed
+4143,Birthday Gift,600,5/14/2026,Variable
+4144,Shoes,950,5/14/2026,Variable
+4145,Laundry,130,5/14/2026,Fixed
+4146,Haircut,100,5/15/2026,Variable
+4147,Medicine,240,5/15/2026,Variable
+4148,Pizza,180,5/15/2026,Variable
+4149,McDonalds,110,5/16/2026,Variable
+4150,Savings Deposit,2000,5/16/2026,Fixed
+4151,Electric Kettle,450,5/16/2026,Variable
+4152,USB Cable,89,5/17/2026,Variable
+4153,Keyboard,650,5/17/2026,Variable
+4154,Mouse,320,5/17/2026,Variable
+4155,Monitor Stand,550,5/18/2026,Variable
+4156,Gym Gloves,200,5/18/2026,Variable
+4157,Creatine,400,5/18/2026,Variable
+4158,Rent,4500,5/19/2026,Fixed
+4159,Insurance,1200,5/19/2026,Fixed
+4160,Bank Charges,85,5/19/2026,Fixed
+4161,Ice Cream,60,5/20/2026,Variable
+4162,Books,980,5/20/2026,Variable
+4163,Pen and Paper,75,5/20/2026,Fixed
+4164,Printer Ink,420,5/21/2026,Variable
+4165,USB Drive,160,5/21/2026,Variable
+4166,Discord Nitro,99,5/21/2026,Fixed
+4167,Burger King,135,5/22/2026,Variable
+4168,Coke Pack,95,5/22/2026,Variable
+4169,Milk,35,5/22/2026,Fixed
+4170,Bread,18,5/22/2026,Fixed
+4171,Toothpaste,42,5/23/2026,Fixed
+4172,Soap,30,5/23/2026,Fixed
+4173,Candles,55,5/23/2026,Variable
+4174,Android Studio Book,760,5/24/2026,Variable
+4175,Domain Hosting,999,5/24/2026,Fixed
+4176,GitHub Copilot,190,5/24/2026,Fixed
+4177,Energy Drink,28,5/25/2026,Variable
+4178,Fruit Juice,45,5/25/2026,Variable
+4179,Headphones,899,5/25/2026,Variable
+4180,Phone Charger,150,5/26/2026,Variable
+4181,Screen Protector,80,5/26/2026,Variable
+4182,Tablet Cover,210,5/26/2026,Variable
+4183,Car Wash,120,5/27/2026,Variable
+4184,Parking Fee,40,5/27/2026,Variable
+4185,Petrol,1300,5/27/2026,Variable
+4186,Water Bottle,25,5/28/2026,Variable
+4187,Dinner Date,780,5/28/2026,Variable
+4188,Taxi,60,5/28/2026,Variable
+4189,Movie Rental,55,5/29/2026,Variable
+4190,Laundry Soap,65,5/29/2026,Fixed
+4191,Light Bulbs,140,5/29/2026,Fixed
+4192,Office Chair,2200,5/30/2026,Variable
+4193,Desk Lamp,320,5/30/2026,Variable
+4194,Notebook,40,5/30/2026,Fixed
+4195,Pasta,55,5/31/2026,Fixed
+4196,Tomato Sauce,30,5/31/2026,Fixed
+4197,Chicken Wings,160,5/31/2026,Variable
+4198,Coffee Beans,190,6/1/2026,Variable
+4199,Tea Bags,50,6/1/2026,Fixed
+4200,Online Course,899,6/1/2026,Variable
+4201,Webcam,720,6/2/2026,Variable
+4202,Microphone,1250,6/2/2026,Variable
+4203,Mouse Pad,110,6/2/2026,Variable
+4204,Gym Shorts,260,6/3/2026,Variable
+4205,Socks,90,6/3/2026,Fixed
+4206,T-Shirts,450,6/3/2026,Variable
+4207,Power Bank,600,6/4/2026,Variable
+4208,Bluetooth Speaker,980,6/4/2026,Variable
+4209,Coding Stickers,70,6/4/2026,Variable
+4210,Exam Registration,1500,6/5/2026,Fixed
+4211,Stationery,230,6/5/2026,Fixed
+4212,Snacks,85,6/5/2026,Variable
+4213,Uber Eats,240,6/6/2026,Variable
+4214,Gaming Mouse,780,6/6/2026,Variable
+4215,SSD Upgrade,1850,6/6/2026,Variable
+4216,RAM Upgrade,2400,6/7/2026,Variable
+4217,Printer Paper,120,6/7/2026,Fixed
+4218,Face Wash,65,6/7/2026,Fixed
+4219,Groceries,1450,6/8/2026,Variable
+4220,Gym Membership,440,1/5/2026,Fixed
+4221,Rent,4500,1/1/2026,Fixed
+4222,Electricity,780,1/15/2026,Fixed
+4223,Groceries,1250,1/20/2026,Variable
+4224,Gym Membership,440,2/5/2026,Fixed
+4225,Rent,4500,2/1/2026,Fixed
+4226,Fuel,1350,2/12/2026,Variable
+4227,Netflix,159,2/18/2026,Fixed
+4228,Gym Membership,440,3/5/2026,Fixed
+4229,WiFi Subscription,699,3/7/2026,Fixed
+4230,Checkers Groceries,980,3/14/2026,Variable
+4231,Steam Game,560,3/22/2026,Variable
+4232,Gym Membership,440,4/5/2026,Fixed
+4233,Electricity,920,4/11/2026,Fixed
+4234,Uber Ride,120,4/16/2026,Variable
+4235,Protein Powder,850,4/25/2026,Variable
+4236,Gym Membership,440,5/5/2026,Fixed
+4237,Rent,4500,5/1/2026,Fixed
+4238,Data Bundle,199,5/9/2026,Fixed
+4239,Movie Tickets,260,5/28/2026,Variable
+4240,CoinCtrl,120,5/17/2026,Variable
+4241,Afgri,45.2,5/18/2026,Fixed
+4242,Qwerty,23,5/18/2026,Variable
+4243,Java,2500,5/19/2026,Variable
+4244,Hydrocholic Acid,50,5/19/2026,fixed
+4245,Boston City Campus,19000,5/20/2026,Fixed
