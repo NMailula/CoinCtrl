@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.*;
 
 
-// Data admin class -> Handles interaction between CoinCtrl's logic and the database
+// Data admin class -> Handles interaction between controller.CoinCtrl's logic and the database
 public class DBAdmin {
 
     // Methods for Expenses-related DB operations

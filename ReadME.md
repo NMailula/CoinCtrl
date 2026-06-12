@@ -1,8 +1,8 @@
-# CoinCtrl
+# controller.CoinCtrl
 
 **Summary of Project**
 
-CoinCtrl is intended to be a financial journaling application, developed to allow users to record and read their financial activities on a monthly and daily basis.
+controller.CoinCtrl is intended to be a financial journaling application, developed to allow users to record and read their financial activities on a monthly and daily basis.
 This application serves as **an advancement and encouragement of personal financial literacy**, for users to have 'control' of their financial activities. 
 
 ---
@@ -32,12 +32,12 @@ SQL           | Data management
 
 ## Project Structures
 ````
-CoinCtrl 
+controller.CoinCtrl 
 ||
 || === Screenshots
 ||
 || === src
-||     || === CoinCtrl.java
+||     || === controller.CoinCtrl.java
 ||     || === DBAdmin.java
 ||     || === DBConnection.java
 ||     || === FinancialOperations.java  
@@ -51,9 +51,9 @@ CoinCtrl
 
 ## Class Overview
 
-## **CoinCtrl.java**
+## **controller.CoinCtrl.java**
 
-This class serves as the main class which initiates user interaction with the CoinCtrl logic.
+This class serves as the main class which initiates user interaction with the controller.CoinCtrl logic.
 The user interacts with a menu-screen, which will appropriately lead the user to the 'back-end' logic;
 
 
@@ -61,7 +61,7 @@ The user interacts with a menu-screen, which will appropriately lead the user to
 
 This method first runs a data backing-up operations (ExpenseDocWriter() ---> DBAdmin.java), which backs ups data from the database into CSV files. This version of application loads expense and income data into 2 separate CSV files.
 This method serves as the main menu (start screen UI in the terminal), where the user will pick 1 of 3 options; Income, Expenses and Overall Finances. 
-In this version of CoinCtrl, overall finances option is unavailable (not yet developed).
+In this version of controller.CoinCtrl, overall finances option is unavailable (not yet developed).
 
 - **Expenses()**
 
@@ -184,9 +184,9 @@ THe Database handles the mathematical logic to calculate the difference between 
 
 ---
 
-## **Diagram of CoinCtrl's Operations (summarized)**
+## **Diagram of controller.CoinCtrl's Operations (summarized)**
 ````
-CoinCtrl.java>main()
+controller.CoinCtrl.java>main()
                ||
                ||====> Expenses() 
                ||              ||

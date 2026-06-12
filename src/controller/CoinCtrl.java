@@ -1,6 +1,6 @@
-/*
+package controller;/*
 
-CoinCtrl
+controller.CoinCtrl
 
 An application developed to record user's financial activities
 
@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 
-// Main class of the CoinCtrl Application
+// Main class of the controller.CoinCtrl Application
 public class CoinCtrl {
 
     // Initializing the scanner object
@@ -34,7 +34,7 @@ public class CoinCtrl {
 
 
         // Welcome message to the Application
-        System.out.println("\n*** Welcome to CoinCtrl ***" +
+        System.out.println("\n*** Welcome to controller.CoinCtrl ***" +
                 "\n| A Personal Financial Journaling Application |");
 
         // Main Menu-Screen
