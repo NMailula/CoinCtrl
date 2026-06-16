@@ -1,157 +1,150 @@
-package controller;/*
+package controller;
 
-controller.CoinCtrl
+// This class will act as the UI Layer of the entire Coinctrl application (represents the front-end of the application). All user interactions with the system will be handled by this class only
 
-An application developed to record user's financial activities
-
-
-
-*/
-
-// Importing libraries necessary
-import java.sql.SQLException;
+//
+import java.time.LocalDate;
 import java.util.Scanner;
 
+import model.Expense;
 
-// Main class of the controller.CoinCtrl Application
+// Controller (main) class
 public class CoinCtrl {
 
-    // Initializing the scanner object
-    private static final Scanner CoinCtrl = new Scanner(System.in);
-
-    // Initializing classes as new objects
-    static FinancialOperations FO = new FinancialOperations();
-    static DBAdmin DAN = new DBAdmin();
-
-    
-    // Main method to run/start the entire application
-    public static void main(String[] args) throws SQLException {
-
-        // Running data back-up processes before application start up
-        DAN.ExpenseDocWriter();
-        DAN.IncomeDocWriter();
+    static Scanner CoinCtrl = new Scanner(System.in);
 
 
+// ------------------------------ All income-related UI ------------------------------
 
-        // Welcome message to the Application
-        System.out.println("\n*** Welcome to controller.CoinCtrl ***" +
-                "\n| A Personal Financial Journaling Application |");
+    // Add Income UI
+public static void AddIncome(){}
 
-        // Main Menu-Screen
-        System.out.println("\n || Main Menu ||"+ "\n 1) Expenses" + //
-                "\n 2) Income" + //
-                "\n 3) Overall Finances " + //
-                "\n------------------");
+    // View All income data
+    public static void ReviewIncomeData(){}
 
-        // User's input (main menu input)
-        System.out.print("~> ");
-        int menuInput = CoinCtrl.nextInt();
-
-        //
-        switch (menuInput) {
-
-            case 1:
-                Expenses();
-                break;
-
-            case 2:
-                Income();
-                break;
-
-            case 3:
-                //OverallFinances();
-                break;
-
-                default:
-                    System.out.println("Invalid Input");
-        }
+    // View time-specified income data (month)
+    public static void ReviewIncomeByMonth(){}
 
 
+    // -----------------------------
+
+
+
+    // ------------------------------ All income-related UI ------------------------------
+
+    // Add Expense
+    public static void addExpense(){
+
+    String ExpenseTitle;
+    double ExpenseAmount;
+    String ExpenseType;
+    LocalDate ExpenseDate =  LocalDate.now();
+
+    System.out.println("\n===================" +
+            "\n Add Expense Module"
+    );
+
+    System.out.print("Enter Expense Title -> ");
+    ExpenseTitle = CoinCtrl.next();
+
+    System.out.print("Enter Expense Amount -> R");
+    ExpenseAmount = CoinCtrl.nextDouble();
+
+    System.out.print("Enter Expense Type -> ");
+    ExpenseType = CoinCtrl.next();
+
+
+    // Pass data to ExpenseRepository.java
+        System.out.println("\nExpense: " +  ExpenseTitle + "\n Expense Amount " + ExpenseAmount + "\n Expense Type: " + ExpenseType
+                + "\n Transaction Date: " + ExpenseDate);
 
     }
 
-    // Method to handle expense related operations
-    public static void Expenses()  {
+    // View All Expense data
+    public static void ReviewAllExpenseData(){}
 
-       int menuInput;
+    // View Expense data by type
+    public static void ReviewExpenseByType(){}
 
-        // Expenses sub-menu
-        System.out.println("\n ------------------" + "\n 1) Record Expenses"+ "\n 2) Review ALL Expense Data" + "\n 3) Review Expenses (By time)" +
-                "\n 4) Review Expenses (By type)" + "\n 5) Review Expenses (By type and time)" +
-                "\n ------------------");
+    // View Expense data by month
+    public static void ReviewExpenseByMonth(){}
 
-        //
-        System.out.print("~> ");
-         menuInput = CoinCtrl.nextInt();
-
-        //
-        switch (menuInput) {
-
-            case 1:
-                System.out.println("\n** Recording Expense **");
-                FO.AddExpenses();
-                break;
-
-                case 2:
-                    System.out.println("\n ** REVIEWING ALL EXPENSES");
-                    DAN.DEDataImport();
-                    break;
-
-            case 3:
-                System.out.println("** REVIEWING EXPENSES BY TIME **");
-                FO.ReviewExpensesByTime();
-                break;
-
-                case 4:
-                    System.out.println("** REVIEWING EXPENSES BY TYPE **");
-                    FO.ReviewExpensesByType();
-                    break;
-
-            case 5:
-                System.out.println("** REVIEWING EXPENSES BY TIME AND TYPE **");
-                FO.ReviewExpensesByTNT();
-                break;
-
-                default:
-                    System.out.println("Invalid Input");
-
-        }
+    // View Expense data by both month and type
+    public static void ReviewExpenseByTNT(){}
 
 
-    }
+    // -----------------------------
 
-    // Method to handle expense related operations
-    public static void Income() throws SQLException {
+    // Main method to start the entire application
+public static void main(String[] args){
 
-        // Expenses sub-menu
-        System.out.println("\n ------------------" + "\n 1) Record Income"+ "\n 2) Review ALL Income Data"
-                + "\n 3) Review Income (By time)" +
-                "\n ------------------");
+// Printing the main menu screen
+    System.out.println("\n *** CoinCtrl ***" +
+            "\n--------------"
 
-        System.out.print("~> ");
-        int menuInput = CoinCtrl.nextInt();
+                    // Income Menu options
+                    + "\n 1) Add Income" + "\n 2) Review All Income"
+            + "\n 3) Review Income By Time" +
 
-        switch (menuInput) {
+            // Expense Menu options
+            "\n 4) Add Expense" + "\n 5) Review All Expenses" +
+            "\n 6) Review Expense By Type" + "\n 7) Review Expense By Time"
+            +"\n 8) Review Expense By Time and Type" +
 
-            case 1:
-                System.out.println("\n** RECORDING INCOME DATA **");
-                FO.AddIncome();
-                DAN.ExpenseDocWriter();
-                break;
+            "\n--------------"
+    );
 
-            case 2:
-                System.out.println("\n** REVIEWING ALL INCOME DATA **");
-                DAN.ImportIncomeData();
-                break;
+    //
+    System.out.print("\n ==> ");
+    String mainMenuInput = CoinCtrl.nextLine();
 
-            case 3:
-                System.out.println("\n** REVIEWING INCOME (BY TIME) **");
-                FO.ReviewIncomeByTime();
-                break;
 
-            default:
-                System.out.println("Invalid Input");
-        }
-    }
+ switch(mainMenuInput){
+
+     case "1":
+         System.out.println("Add Income");
+         break;
+
+         case "2":
+             System.out.println("Review All Income");
+             break;
+
+             case "3":
+                 System.out.println("Review Income By Time");
+                 break;
+
+                 case "4":
+                     System.out.println("Add Expense");
+                     addExpense();
+                     break;
+
+                     case "5":
+                         System.out.println("Review All Expenses");
+                         break;
+
+                         case "6":
+                             System.out.println("Review Expense By Type");
+                             break;
+
+                             case "7":
+                                 System.out.println("Review Expense By Month");
+                                 break;
+
+                                 case "8":
+                                     System.out.println("Review Expenses By month and type");
+                                     break;
+
+
+                                     default:
+                                         System.out.println("Invalid Input");
+                                         break;
+
+
+
+
+
+ }
+
+}
 
 }
