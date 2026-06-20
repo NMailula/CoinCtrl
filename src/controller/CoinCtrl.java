@@ -4,6 +4,7 @@ package controller;
 
 //
 import java.time.LocalDate;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import model.Expense;
@@ -14,7 +15,7 @@ public class CoinCtrl {
     static Scanner CoinCtrl = new Scanner(System.in);
 
 
-// ------------------------------ All income-related UI ------------------------------
+// ------------------------------ All income-related UI syntax ------------------------------
 
     // Add Income UI
 public static void AddIncome(){}
@@ -30,7 +31,7 @@ public static void AddIncome(){}
 
 
 
-    // ------------------------------ All income-related UI ------------------------------
+    // ------------------------------ All income-related UI syntax ------------------------------
 
     // Add Expense
     public static void addExpense(){
@@ -64,7 +65,25 @@ public static void AddIncome(){}
     public static void ReviewAllExpenseData(){}
 
     // View Expense data by type
-    public static void ReviewExpenseByType(){}
+    public static void ReviewExpenseByType(){
+
+    // Searching for specific expense type
+    System.out.println("\n **** Reviewing Expenses By Type ****" );
+
+    while(true){
+        System.out.print("Enter Expense Type -> ");
+        String ExpenseType = CoinCtrl.nextLine().trim();
+
+        if (ExpenseType.equalsIgnoreCase("Variable") || ExpenseType.equalsIgnoreCase("Fixed")){
+            System.out.println(ExpenseType);
+            break;
+        } else{
+            System.out.println(ExpenseType + " is not an expense type; please try again");
+        }
+    }
+
+
+    }
 
     // View Expense data by month
     public static void ReviewExpenseByMonth(){}
@@ -76,74 +95,91 @@ public static void AddIncome(){}
     // -----------------------------
 
     // Main method to start the entire application
-public static void main(String[] args){
+public static void main(String[] args) {
 
 // Printing the main menu screen
     System.out.println("\n *** CoinCtrl ***" +
             "\n--------------"
 
-                    // Income Menu options
-                    + "\n 1) Add Income" + "\n 2) Review All Income"
+            // Income Menu options
+            + "\n 1) Add Income" + "\n 2) Review All Income"
             + "\n 3) Review Income By Time" +
 
             // Expense Menu options
             "\n 4) Add Expense" + "\n 5) Review All Expenses" +
             "\n 6) Review Expense By Type" + "\n 7) Review Expense By Time"
-            +"\n 8) Review Expense By Time and Type" +
+            + "\n 8) Review Expense By Time and Type" +
 
             "\n--------------"
     );
 
-    //
-    System.out.print("\n ==> ");
-    String mainMenuInput = CoinCtrl.nextLine();
+    int mainMenuInput = 0;
+    boolean menuScreen = true;
+
+   while (menuScreen){
+       try {
+           while (true) {
+               //
+               System.out.print("\n ==> ");
+               mainMenuInput = CoinCtrl.nextInt();
+
+               if (mainMenuInput < 1 || mainMenuInput > 8) {
+                   System.out.println("Invalid Input");
+               } else {
+                   break;
+               }
+
+           }
+           menuScreen = false;
+       } catch(InputMismatchException e){
+           System.out.println("Invalid Input: Please enter any option (no. 1-8) " + e.getMessage());
+           CoinCtrl.nextLine();
+       }
+   }
+
+    switch (mainMenuInput) {
+
+        case 1:
+            System.out.println("Add Income");
+            break;
+
+        case 2:
+            System.out.println("Review All Income");
+            break;
+
+        case 3:
+            System.out.println("Review Income By Time");
+            break;
+
+        case 4:
+            System.out.println("Add Expense");
+            addExpense();
+            break;
+
+        case 5:
+            System.out.println("Review All Expenses");
+            break;
+
+        case 6:
+            System.out.println("Review Expense By Type");
+            ReviewExpenseByType();
+            break;
+
+        case 7:
+            System.out.println("Review Expense By Month");
+            break;
+
+        case 8:
+            System.out.println("Review Expenses By month and type");
+            break;
 
 
- switch(mainMenuInput){
-
-     case "1":
-         System.out.println("Add Income");
-         break;
-
-         case "2":
-             System.out.println("Review All Income");
-             break;
-
-             case "3":
-                 System.out.println("Review Income By Time");
-                 break;
-
-                 case "4":
-                     System.out.println("Add Expense");
-                     addExpense();
-                     break;
-
-                     case "5":
-                         System.out.println("Review All Expenses");
-                         break;
-
-                         case "6":
-                             System.out.println("Review Expense By Type");
-                             break;
-
-                             case "7":
-                                 System.out.println("Review Expense By Month");
-                                 break;
-
-                                 case "8":
-                                     System.out.println("Review Expenses By month and type");
-                                     break;
+        default:
+            System.out.println("Invalid Input");
+            break;
 
 
-                                     default:
-                                         System.out.println("Invalid Input");
-                                         break;
-
-
-
-
-
- }
+    }
 
 }
 
