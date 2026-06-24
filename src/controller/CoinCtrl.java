@@ -7,7 +7,8 @@ import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import model.Expense;
+//
+
 
 // Controller (main) class
 public class CoinCtrl {
