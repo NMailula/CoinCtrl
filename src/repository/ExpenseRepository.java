@@ -3,7 +3,6 @@ package repository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.InputMismatchException;
 
 import model.*;
 
@@ -13,7 +12,7 @@ public class ExpenseRepository {
 private static DBConnection dbconnection = new DBConnection();
 
 
-    public static boolean saveExpense(Expense expense) throws SQLException{
+    public  boolean saveExpense(Expense expense) {
 
         //
         String ExpenseDataQuery = "INSERT INTO expenses (Title, Amount, Transaction_Date, Type) VALUES (?,?,?,?,?)";
@@ -37,11 +36,12 @@ private static DBConnection dbconnection = new DBConnection();
 
 
 
-        }catch(InputMismatchException e){
+        }catch(SQLException e){
             System.out.println("DB Error: " + e.getMessage());
             return false;
         }
 
 
     }
+
 }

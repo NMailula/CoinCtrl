@@ -8,6 +8,7 @@ import service.*;
 import model.*;
 import repository.*;
 
+import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -17,6 +18,8 @@ public class CoinCtrl {
 
     static Scanner CoinCtrl = new Scanner(System.in);
 
+    static ExpenseService service = new ExpenseService();
+    static LocalDate ExpenseDate = LocalDate.now();
 
 
 
@@ -39,7 +42,66 @@ public static void AddIncome(){}
     // ------------------------------ All income-related UI syntax ------------------------------
 
     // Add Expense
-    public static void addExpenseUI() {}
+    public static void addExpenseUI() {
+
+        //
+        String ExpenseTitle;
+        while (true) {
+
+            System.out.print("Enter Expense Title: ");
+            ExpenseTitle = CoinCtrl.nextLine().trim();
+
+            if (!ExpenseTitle.matches("[a-zA-Z]+")) {
+                System.out.println("Error: Invalid Expense Title");
+            } else {
+                break;
+            }
+
+        }
+
+        //
+        double ExpenseAmount;
+        while (true) {
+            try {
+                System.out.print("Enter Expense Amount: R");
+                ExpenseAmount = CoinCtrl.nextDouble();
+
+                if (ExpenseAmount < 0) {
+                    System.out.println("ERROR: Expense can't be negative");
+                } else {
+                    // syntax added to avoid the 3rd while-loop from breaking before user input
+                    CoinCtrl.nextLine();
+
+                    break;
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("*** Error: Expense must be numerical ***");
+                CoinCtrl.next();
+            }
+        }
+
+        //
+        String ExpenseType;
+        while (true) {
+            System.out.print("Enter Expense Type: ");
+            ExpenseType = CoinCtrl.nextLine().trim();
+
+            if (ExpenseType.isEmpty()) {
+                System.out.println("Error: Expense Type can't be empty");
+                continue;
+            }
+            if (ExpenseType.equalsIgnoreCase("Variable") || ExpenseType.equalsIgnoreCase("Fixed")) {
+                break;
+            } else {
+                System.out.println("Error: Invalid Expense Type input");
+            }
+
+        }
+
+        service.InputValidation(ExpenseTitle,ExpenseAmount, ExpenseType, ExpenseDate);
+
+    }
 
     // View All Expense data
     public static void ReviewAllExpenseData(){}
