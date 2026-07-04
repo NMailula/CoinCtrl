@@ -32,20 +32,34 @@ SQL           | Data management
 
 ## Project Structures
 ````
-controller.CoinCtrl 
-||
-|| === Screenshots
-||
-|| === src
-||     || === controller.CoinCtrl.java
-||     || === DBAdmin.java
-||     || === DBConnection.java
-||     || === FinancialOperations.java  
-||
-||
-|| === ReadME.md
-|| === expenses_export.csv
-|| === income_export.csv
+CoinCtrl/_
+         |
+         src/
+            |
+            |____ controller/__
+            |                  |___ CoinCtrl.java  
+            |
+            |
+            |____ Repository/__
+            |                  |___ ExpenseRepository.java
+            |                  |___ IncomeRepository.java
+            |                  
+            |
+            |____ Service/__
+            |               |___ ExpenseService.java
+            |               |___ IncomeService.java
+            |
+            |
+            |____ model/__
+            |            |___ Expense.java
+            |            |___ Income.java
+            |
+            |
+            |___ utils/__
+            |           |
+            |           |___ CSVWriter.java
+            |
+            |___ ReadME.md
 ````
 --- 
 
@@ -183,26 +197,6 @@ THe Database handles the mathematical logic to calculate the difference between 
 
 
 ---
-
-## **Diagram of controller.CoinCtrl's Operations (summarized)**
-````
-controller.CoinCtrl.java>main()
-               ||
-               ||====> Expenses() 
-               ||              ||
-               ||              ||==========>| FinancialOperations.java |================================================>||                                                    
-               ||                                             ||==> ReviewExpensesByTime() =============================>||                     ||===> DailyExpenseRecorder()
-               ||                                             ||==> ReviewExpensesByType() =============================>||                     ||===> DEDataImport()
-               ||                                             ||==> ReviewExepnsesByTNT() ==============================>||                     ||===> ExpensesByTime()
-               ||                                             ||==> AddExpenses()=======================================>||=> |DBAdmin.java|====||===> ExpensesByType()
-               ||                                             ||                                                         ||                     ||===> ExpensesByMonthType()
-               ||                                             ||==> ReviewIncomeByTime()  ==============================>||                     ||===> ExpenseDocWriter()
-               ||                                             ||==> AddIncome()=========================================>||                     ||===> MonthlyIncomeRecorder()
-               ||                                             ||                                                         ||                     ||===> ImportIncomeData()
-               ||===> Income()================================|| ========================================================||                     ||===> IncomeByTime()
-                                                                                                                                                ||===> IncomeDocWriter()
-````
-
 
 ## Contributions
 

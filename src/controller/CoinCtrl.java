@@ -3,17 +3,21 @@ package controller;
 // This class will act as the UI Layer of the entire Coinctrl application (represents the front-end of the application). All user interactions with the system will be handled by this class only
 
 //
-import java.time.LocalDate;
+
+import service.*;
+import model.*;
+import repository.*;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-//
 
 
 // Controller (main) class
 public class CoinCtrl {
 
     static Scanner CoinCtrl = new Scanner(System.in);
+
+
 
 
 // ------------------------------ All income-related UI syntax ------------------------------
@@ -35,32 +39,7 @@ public static void AddIncome(){}
     // ------------------------------ All income-related UI syntax ------------------------------
 
     // Add Expense
-    public static void addExpense(){
-
-    String ExpenseTitle;
-    double ExpenseAmount;
-    String ExpenseType;
-    LocalDate ExpenseDate =  LocalDate.now();
-
-    System.out.println("\n===================" +
-            "\n Add Expense Module"
-    );
-
-    System.out.print("Enter Expense Title -> ");
-    ExpenseTitle = CoinCtrl.next();
-
-    System.out.print("Enter Expense Amount -> R");
-    ExpenseAmount = CoinCtrl.nextDouble();
-
-    System.out.print("Enter Expense Type -> ");
-    ExpenseType = CoinCtrl.next();
-
-
-    // Pass data to ExpenseRepository.java
-        System.out.println("\nExpense: " +  ExpenseTitle + "\n Expense Amount " + ExpenseAmount + "\n Expense Type: " + ExpenseType
-                + "\n Transaction Date: " + ExpenseDate);
-
-    }
+    public static void addExpenseUI() {}
 
     // View All Expense data
     public static void ReviewAllExpenseData(){}
@@ -114,34 +93,31 @@ public static void main(String[] args) {
             "\n--------------"
     );
 
-    int mainMenuInput = 0;
-    boolean menuScreen = true;
+    int mainMenuInput;
 
-   while (menuScreen){
-       try {
-           while (true) {
-               //
-               System.out.print("\n ==> ");
-               mainMenuInput = CoinCtrl.nextInt();
+    while (true) {
+        try {
+            System.out.print("==> ");
+            mainMenuInput = CoinCtrl.nextInt();
 
-               if (mainMenuInput < 1 || mainMenuInput > 8) {
-                   System.out.println("Invalid Input");
-               } else {
-                   break;
-               }
+            if (mainMenuInput <1  || mainMenuInput > 8) {
+                System.out.println("Invalid Input: Choose between 1 and 8");
+            } else {
+                break;
+            }
 
-           }
-           menuScreen = false;
-       } catch(InputMismatchException e){
-           System.out.println("Invalid Input: Please enter any option (no. 1-8) " + e.getMessage());
-           CoinCtrl.nextLine();
-       }
-   }
+
+        } catch (InputMismatchException e) {
+            System.out.println("\nError: Please enter a valid option [1-8]");
+            CoinCtrl.nextLine();
+        }
+    }
 
     switch (mainMenuInput) {
 
         case 1:
             System.out.println("Add Income");
+            AddIncome();
             break;
 
         case 2:
@@ -154,7 +130,7 @@ public static void main(String[] args) {
 
         case 4:
             System.out.println("Add Expense");
-            addExpense();
+            addExpenseUI();
             break;
 
         case 5:
