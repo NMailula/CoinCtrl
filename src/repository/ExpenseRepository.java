@@ -9,39 +9,35 @@ import model.*;
 
 public class ExpenseRepository {
 
-private static DBConnection dbconnection = new DBConnection();
+    private DBConnection sbCon = new DBConnection();
 
 
-    public  boolean saveExpense(Expense expense) {
+    public boolean saveExpense(Expense expense) {
 
-        //
-        String ExpenseDataQuery = "INSERT INTO expenses (Title, Amount, Transaction_Date, Type) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO expenses (Title, Amount, Transaction_Date, Type) VALUES (?, ?, ?, ?)";
 
-        try (Connection connection = dbconnection.getConnection();
-             PreparedStatement ps = connection.prepareStatement(ExpenseDataQuery)) {
+        try (Connection con = sbCon.getConnection();
+             PreparedStatement pstmt = con.prepareStatement(sql)) {
 
-          // Setting Expense Title
-            ps.setString(1, expense.getExpenseTitle());
-            // Setting Expense Amount
-            ps.setDouble(2, expense.getExpenseAmount());
-            // Setting Expense Date
-            ps.setDate(3,java.sql.Date.valueOf( expense.getExpenseDate()));
-            // Setting Expense Type
-            ps.setString(4, expense.getExpenseType());
+            pstmt.setString(1, expense.getExpenseTitle());
+            pstmt.setDouble(2, expense.getExpenseAmount());
+            pstmt.setDate(3, java.sql.Date.valueOf(expense.getExpenseDate()));
+            pstmt.setString(4, expense.getExpenseType());
 
-           int rows = ps.executeUpdate();
+            int rows =  pstmt.executeUpdate();
 
-           return rows > 0;
+            return  rows > 0;
 
 
-
-
-        }catch(SQLException e){
-            System.out.println("DB Error: " + e.getMessage());
+        } catch (SQLException e) {
+            e.printStackTrace();
             return false;
         }
 
-
     }
+
+
+
+
 
 }

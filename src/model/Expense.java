@@ -5,20 +5,19 @@ import java.time.LocalDate;
 public class Expense {
 
     private String ExpenseTitle;
+    private Double ExpenseAmount;
+    private LocalDate  ExpenseDate;
     private String ExpenseType;
-    private double ExpenseAmount;
-
-    private LocalDate ExpenseDate;
 
 
     public Expense() {
         this.ExpenseTitle = ExpenseTitle;
-        this.ExpenseType = ExpenseType;
         this.ExpenseAmount = ExpenseAmount;
+        this.ExpenseType = ExpenseType;
         this.ExpenseDate = LocalDate.now();
     }
 
-    // Getters + setters
+    // Getters and Setters
     public String getExpenseTitle() { return ExpenseTitle;}
     public String setExpenseTitle(String ExpenseTitle) {this.ExpenseTitle = ExpenseTitle;
         return ExpenseTitle;
@@ -34,7 +33,6 @@ public class Expense {
 
     public String getExpenseType() { return ExpenseType;}
     public void setExpenseType(String ExpenseType) {this.ExpenseType = ExpenseType;}
-
 
 
 }

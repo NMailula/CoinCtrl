@@ -14,27 +14,29 @@ public class ExpenseService {
     Expense expense = new Expense();
 
 
+    //
+    public void InputValidation(String ExpenseTitle, double ExpenseAmount, String ExpenseType, LocalDate ExpenseDate){
 
-   public void InputValidation(String ExpenseTitle, double ExpenseAmount, String ExpenseType, LocalDate ExpenseDate) {
+        if (ExpenseTitle.matches("[a-zA-Z]+") || ExpenseAmount > 0) {
+
+            // setting
+            expense.setExpenseTitle(ExpenseTitle);
+            expense.setExpenseType(ExpenseType);
+            //
+            expense.setExpenseDate(ExpenseDate);
+            expense.setExpenseAmount(ExpenseAmount);
+
+        } else {
+            System.out.println("Error: Invalid Input");
+        }
+
+        //
+        boolean saved = repo.saveExpense(expense);
+        System.out.println(saved ? "Expense Saved" : "Expense Not Saved");
 
 
-       if (ExpenseAmount > 0 || ExpenseTitle.matches("[a-zA-Z]+")) {
+    }
 
-           //
-           expense.setExpenseTitle(ExpenseTitle);
-           expense.setExpenseType(ExpenseType);
-           //
-           expense.setExpenseAmount(ExpenseAmount);
-           expense.setExpenseDate(ExpenseDate);
 
-       } else {
-           System.out.println("*** Error: Invalid input ***");
-           CoinCtrl.addExpenseUI();
-       }
-
-       boolean saved = repo.saveExpense(expense);
-       System.out.println(saved ? "Expense saved" : "Expense not Saved");
-
-   }
 
 }
