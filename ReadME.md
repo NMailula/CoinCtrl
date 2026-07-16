@@ -1,4 +1,4 @@
-# controller.CoinCtrl
+# CoinCtrl
 
 **Summary of Project**
 
