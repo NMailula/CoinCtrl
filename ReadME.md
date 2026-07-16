@@ -2,7 +2,7 @@
 
 **Summary of Project**
 
-controller.CoinCtrl is intended to be a financial journaling application, developed to allow users to record and read their financial activities on a monthly and daily basis.
+CoinCtrl is intended to be a financial journaling application, developed to allow users to record and read their financial activities on a monthly and daily basis.
 This application serves as **an advancement and encouragement of personal financial literacy**, for users to have 'control' of their financial activities. 
 
 ---
